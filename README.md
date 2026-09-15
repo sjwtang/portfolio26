@@ -1,4 +1,4 @@
-# Shirley Tang Portfolio
+# portfolio26
 
 A Next.js recreation of [shirleytang.framer.website](https://shirleytang.framer.website/), ready to host on Vercel.
 
