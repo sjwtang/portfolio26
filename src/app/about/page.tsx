@@ -2,7 +2,7 @@ import Image from "next/image";
 import { OutlineButton } from "@/components/OutlineButton";
 
 const experience = [
-  { role: "UX Designer", rest: "@ Oracle (2026)" },
+  { role: "UX Designer", rest: "@ Oracle (2026 - Present)" },
   { role: "UX Design Intern", rest: "@ Oracle (2025)" },
   { role: "UX Designer", rest: "@ GoodMaps (2022 – 2024)" },
   { role: "UX Design & Research Intern", rest: "@ GoodMaps (2022)" },
@@ -136,7 +136,7 @@ export default function AboutPage() {
         <div className="about-text-block">
           <p>
             From designing in academia to the start-up space, I have cultivated a
-            strong skillset in user research, design thinking, and user flows,
+            strong skillset in problem solving, design thinking, and crafting user flows,
             allowing me to build engaging user experiences that target desired
             audiences.
           </p>
