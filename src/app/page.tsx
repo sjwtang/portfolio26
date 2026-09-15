@@ -116,12 +116,13 @@ export default function HomePage() {
               gap: 20,
             }}
           >
-            <Link href={project.href}>
+            <Link href={project.href} className="project-image-link">
               <Image
                 src={project.image}
                 alt=""
                 width={678}
                 height={615}
+                className="project-image"
                 style={{ width: "100%", height: "auto" }}
               />
             </Link>
