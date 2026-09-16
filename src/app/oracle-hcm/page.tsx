@@ -10,7 +10,7 @@ export default function OraclePage() {
   return (
     <article>
       <CaseHero
-        title="Oracle HCM: nurse self-scheduling"
+        title="Oracle HCM: Nurse Self-Scheduling"
         subtitle="Helping nurses sign up for their desired shifts"
         image="/images/oracle-hero.png"
         imageAlt="Mobile phone showing nurse self-scheduling calendar"

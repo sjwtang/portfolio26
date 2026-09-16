@@ -12,7 +12,7 @@ export default function GoodMapsPage() {
   return (
     <article>
       <CaseHero
-        title="GoodMaps: indoor navigation"
+        title="GoodMaps: Indoor Navigation"
         subtitle="Creating an accessible wayfinding app to navigate inside complex buildings"
         image="/images/gm-hero.png"
         imageAlt="GoodMaps indoor navigation app screens"
