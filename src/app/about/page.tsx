@@ -15,22 +15,26 @@ const publications = [
     title:
       "“Evaluating an AI-enhanced power wheelchair obstacle alert system: Effects of multimodal warning design on warning-response behavior”",
     venue: "– Transportation Research Part F: Traffic Psychology and Behaviour (2026)",
+    href: "https://www-sciencedirect-com.libaccess.sjlibrary.org/science/article/pii/S1369847826002962",
   },
   {
     title:
       '"Human factors in remote driving and remote assistance: a systematic review for road transport automation"',
     venue: "– Cognition, Technology, & Work (2026)",
+    href: "https://link.springer.com/article/10.1007/s10111-026-00887-0",
   },
   {
     title:
       "“Navigation Assistance Via Haptic Technology for Blind or Low-Vision Users: A Scoping Review”",
     venue:
       "– Proceedings of the Human Factors and Ergonomics Society (2025)",
+    href: "https://journals-sagepub-com.libaccess.sjlibrary.org/doi/10.1177/10711813251360706",
   },
   {
     title:
       "“Augmenting Pathologists with NaviPath: Design and Evaluation of a Human-AI Collaborative Navigation System”",
     venue: "– ACM CHI Conference, Honorable Mention (2023)",
+    href: "https://dl.acm.org/doi/10.1145/3544548.3580694",
   },
 ];
 
@@ -51,7 +55,7 @@ const recognition = [
 
 export default function AboutPage() {
   return (
-    <div className="page-shell about-page">
+    <div className="page-shell site-shell about-page">
       <section className="about-hero">
         <div className="about-hero-copy">
           <Image
@@ -149,7 +153,7 @@ export default function AboutPage() {
         <hr className="case-divider about-divider" />
 
         <div className="about-text-block">
-          <h2>Other Things I Enjoy..</h2>
+          <h2>Other things I enjoy..</h2>
         </div>
 
         <figure className="about-hobbies">
@@ -179,7 +183,16 @@ export default function AboutPage() {
             <ul className="about-pubs">
               {publications.map((item) => (
                 <li key={item.title}>
-                  <strong>{item.title}</strong>
+                  <strong>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="about-pub-link"
+                    >
+                      {item.title}
+                    </a>
+                  </strong>
                   <br />
                   {item.venue}
                 </li>

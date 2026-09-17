@@ -22,6 +22,16 @@ const projects = [
       "Indoor turn-by-turn navigation for users of various accessibility needs",
   },
   {
+    href: "/acme",
+    image: "/images/acme-card.png",
+    badge: "/images/acme-badge.png",
+    badgeWidth: 104,
+    badgeHeight: 44,
+    title: "ACME: Credit Card Fraud Dashboard",
+    description:
+      "Call center dashboard that helps investigators resolve suspected credit card fraud cases",
+  },
+  {
     href: "/navipath",
     image: "/images/navipath-card.png",
     badge: "/images/navipath-badge.png",
@@ -36,7 +46,7 @@ const projects = [
 
 export default function HomePage() {
   return (
-    <div className="page-shell" style={{ paddingTop: 48 }}>
+    <div className="page-shell site-shell" style={{ paddingTop: 80, paddingBottom: 300 }}>
       <section style={{ maxWidth: 1405 }}>
         <p
           style={{
@@ -76,7 +86,7 @@ export default function HomePage() {
           >
             @SJSU
           </a>
-          &apos;26 with an M.S. Human Factors &amp; Ergonomics (UX conc).
+          &apos;26 with an M.S. Human Factors &amp; Ergonomics, UX Concentration.
         </p>
       </section>
 
@@ -85,7 +95,7 @@ export default function HomePage() {
           display: "flex",
           justifyContent: "center",
           marginTop: 72,
-          marginBottom: 72,
+          marginBottom: 120,
         }}
       >
         <Image
@@ -120,10 +130,9 @@ export default function HomePage() {
               <Image
                 src={project.image}
                 alt=""
-                width={678}
-                height={615}
+                width={1485}
+                height={1329}
                 className="project-image"
-                style={{ width: "100%", height: "auto" }}
               />
             </Link>
             <div
@@ -133,12 +142,14 @@ export default function HomePage() {
                 gap: 20,
               }}
             >
-              <Image
-                src={project.badge}
-                alt=""
-                width={project.badgeWidth}
-                height={project.badgeHeight}
-              />
+              <div className="project-badge">
+                <Image
+                  src={project.badge}
+                  alt=""
+                  width={project.badgeWidth}
+                  height={project.badgeHeight}
+                />
+              </div>
               <div
                 style={{
                   display: "flex",

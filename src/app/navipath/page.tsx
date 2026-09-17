@@ -22,6 +22,7 @@ export default function NaviPathPage() {
         divider={false}
         titleGap={24}
         framePadding="40px 0"
+        frameClassName="case-hero-frame np-hero-frame"
         metaLeft={[
           { label: "Role", value: "UX Designer" },
           { label: "Collaborators", value: "Hongyan Gu" },

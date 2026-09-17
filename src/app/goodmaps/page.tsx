@@ -21,12 +21,36 @@ export default function GoodMapsPage() {
         framed
         divider={false}
         titleGap={24}
-        framePadding="40px 0 24px"
-        frameGap={51}
+        framePadding="40px 0"
+        frameClassName="case-hero-frame gm-hero-frame"
         heroFooter={
           <div className="gm-tool-logos">
-            <Image src="/images/gm-tool1.png" alt="" width={84} height={25} />
-            <Image src="/images/gm-tool2.png" alt="" width={85} height={25} />
+            <a
+              href="https://apps.apple.com/us/app/goodmaps-indoor-navigation/id6444539843"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <Image
+                src="/images/gm-tool1.png"
+                alt="Download on the App Store"
+                width={84}
+                height={25}
+              />
+            </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.goodmapsapp&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get it on Google Play"
+            >
+              <Image
+                src="/images/gm-tool2.png"
+                alt="Get it on Google Play"
+                width={85}
+                height={25}
+              />
+            </a>
           </div>
         }
         metaLeft={[

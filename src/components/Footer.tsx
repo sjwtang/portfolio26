@@ -22,6 +22,7 @@ const connect = [
 const projects = [
   { label: "Oracle", href: "/oracle-hcm" },
   { label: "GoodMaps", href: "/goodmaps" },
+  { label: "ACME", href: "/acme" },
   { label: "NaviPath", href: "/navipath" },
 ];
 
@@ -43,10 +44,11 @@ function ExtIcon() {
 
 export function Footer() {
   return (
-    <footer
-      className="page-shell"
-      style={{ paddingTop: 80, paddingBottom: 64 }}
-    >
+    <footer className="site-footer">
+      <div
+        className="page-shell site-shell"
+        style={{ paddingTop: 80, paddingBottom: 80 }}
+      >
       <div
         style={{
           display: "flex",
@@ -134,6 +136,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );

@@ -18,6 +18,8 @@ export function CaseHero({
   titleGap = 28,
   framePadding = "40px 0",
   frameGap,
+  frameClassName,
+  imageStyle,
   heroFooter,
   metaLeft,
   metaRight,
@@ -34,6 +36,8 @@ export function CaseHero({
   titleGap?: number;
   framePadding?: string;
   frameGap?: number;
+  frameClassName?: string;
+  imageStyle?: CSSProperties;
   heroFooter?: ReactNode;
   metaLeft: MetaPair[];
   metaRight: MetaPair[];
@@ -67,6 +71,7 @@ export function CaseHero({
       </div>
 
       <div
+        className={frameClassName}
         style={
           framed
             ? {
@@ -94,6 +99,7 @@ export function CaseHero({
             width: framed && !heroFooter ? "auto" : "100%",
             maxWidth: "100%",
             height: "auto",
+            ...imageStyle,
           }}
         />
         {heroFooter}
