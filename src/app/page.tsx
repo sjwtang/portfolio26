@@ -1,46 +1,62 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const projects = [
+const projects: {
+  href: string;
+  image: string;
+  badge: string;
+  badgeWidth: number;
+  badgeHeight: number;
+  title: string;
+  description: string;
+  award?: string;
+  tags?: string[];
+}[] = [
   {
     href: "/oracle-hcm",
     image: "/images/oracle-card.png",
     badge: "/images/oracle-badge.png",
-    badgeWidth: 77,
-    badgeHeight: 49,
+    badgeWidth: 63,
+    badgeHeight: 40,
     title: "Oracle HCM: Nurse Self-Scheduling",
-    description: "Self-scheduling tool that helps nurses sign up for shifts",
+    description:
+      "Designing an AI-assisted scheduling experience for nurses navigating complex staffing constraints",
+    tags: ["AI", "Enterprise", "Healthcare", "Mobile"],
   },
   {
     href: "/goodmaps",
     image: "/images/goodmaps-card.png",
     badge: "/images/goodmaps-badge.png",
-    badgeWidth: 50,
-    badgeHeight: 49,
+    badgeWidth: 41,
+    badgeHeight: 40,
     title: "GoodMaps: Indoor Navigation",
     description:
-      "Indoor turn-by-turn navigation for users of various accessibility needs",
+      "Redesigning indoor navigation to help people with diverse accessibility needs confidently navigate unfamiliar spaces",
+    tags: ["Accessibility", "B2C", "Navigation", "Mobile"],
+    award: "+250% MAU Growth",
   },
   {
     href: "/acme",
     image: "/images/acme-card.png",
     badge: "/images/acme-badge.png",
-    badgeWidth: 104,
-    badgeHeight: 44,
+    badgeWidth: 95,
+    badgeHeight: 40,
     title: "ACME: Credit Card Fraud Dashboard",
     description:
-      "Call center dashboard that helps investigators resolve suspected credit card fraud cases",
+      "Designing a workflow that helps fraud investigators review and resolve suspicious transactions",
+    tags: ["AI", "Enterprise", "Data Visualization", "Web"],
   },
   {
     href: "/navipath",
     image: "/images/navipath-card.png",
     badge: "/images/navipath-badge.png",
-    badgeWidth: 121,
-    badgeHeight: 49,
+    badgeWidth: 99,
+    badgeHeight: 40,
     title: "NaviPath: AI-Assisted Mitosis Search",
     award: "Honorable Mention @ ACM CHI '23",
     description:
-      "AI-enabled navigation system that helps pathologists search for mitosis",
+      "Exploring how AI can help pathologists search for mitosis while keeping experts in control",
+    tags: ["AI", "Healthcare", "Human-AI Interaction", "Web"],
   },
 ];
 
@@ -160,50 +176,43 @@ export default function HomePage() {
                   gap: 16,
                 }}
               >
-                {project.award ? (
-                  <div
+                <Link href={project.href} className="project-title">
+                  {project.title}
+                </Link>
+                <div className="project-meta">
+                  <p
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: 12,
+                      fontSize: 18,
+                      fontWeight: 400,
+                      lineHeight: "27px",
+                      margin: 0,
+                      color: "#333333",
                     }}
                   >
-                    <Link href={project.href} className="project-title">
-                      {project.title}
-                    </Link>
-                    <p
-                      style={{
-                        display: "inline-block",
-                        width: "fit-content",
-                        margin: 0,
-                        padding: "4px 12px",
-                        borderRadius: 15,
-                        background: "#fcefc7",
-                        fontSize: 18,
-                        fontWeight: 400,
-                        lineHeight: "21.6px",
-                        color: "#333333",
-                      }}
-                    >
-                      {project.award}
+                    {project.description}
+                  </p>
+                  {project.tags ? (
+                    <p className="project-tags">
+                      {project.tags.map((tag, index) => (
+                        <span key={tag}>
+                          {index > 0 ? (
+                            <span
+                              className="project-tags-sep"
+                              aria-hidden="true"
+                            >
+                              {" "}
+                              ·{" "}
+                            </span>
+                          ) : null}
+                          <span>{tag}</span>
+                        </span>
+                      ))}
                     </p>
-                  </div>
-                ) : (
-                  <Link href={project.href} className="project-title">
-                    {project.title}
-                  </Link>
-                )}
-                <p
-                  style={{
-                    fontSize: 18,
-                    fontWeight: 400,
-                    lineHeight: "27px",
-                    margin: 0,
-                    color: "#333333",
-                  }}
-                >
-                  {project.description}
-                </p>
+                  ) : null}
+                  {project.award ? (
+                    <p className="project-award">{project.award}</p>
+                  ) : null}
+                </div>
               </div>
             </div>
           </article>

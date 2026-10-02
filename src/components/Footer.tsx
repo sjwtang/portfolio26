@@ -14,7 +14,7 @@ const connect = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1kyyxN3mthFoLITRr6x6GE5hE4r0bOc3M/view?usp=sharing",
+    href: "/ShirleyTang_Resume.pdf",
     external: true,
   },
 ];

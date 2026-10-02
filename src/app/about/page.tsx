@@ -90,7 +90,7 @@ export default function AboutPage() {
         >
           Email
         </OutlineButton>
-        <OutlineButton href="https://drive.google.com/file/d/1kyyxN3mthFoLITRr6x6GE5hE4r0bOc3M/view?usp=sharing">
+        <OutlineButton href="/ShirleyTang_Resume.pdf">
           Resume
         </OutlineButton>
       </div>
@@ -183,18 +183,18 @@ export default function AboutPage() {
             <ul className="about-pubs">
               {publications.map((item) => (
                 <li key={item.title}>
-                  <strong>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="about-pub-link"
-                    >
-                      {item.title}
-                    </a>
-                  </strong>
+                  <strong>{item.title}</strong>
                   <br />
-                  {item.venue}
+                  {item.venue}{" "}
+                  <span aria-hidden="true">•</span>{" "}
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-blue about-pub-link"
+                  >
+                    View publication ↗
+                  </a>
                 </li>
               ))}
             </ul>
