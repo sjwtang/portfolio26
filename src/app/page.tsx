@@ -56,8 +56,8 @@ export default function HomePage() {
             color: "#333333",
           }}
         >
-          Shirley Tang is a UX designer creating thoughtful experiences for
-          complex, AI-enabled products.
+          Shirley Tang is a UX designer who makes complex, AI-enabled products
+          clear and usable.
         </p>
         <p
           style={{
@@ -68,7 +68,7 @@ export default function HomePage() {
           }}
         >
           Most recently, she designed{" "}
-          <span className="intro-highlight">agentic applications</span> at{" "}
+          <span className="intro-highlight">AI-assisted workflows</span> at{" "}
           <a
             className="link-blue"
             href="https://www.oracle.com/human-capital-management/"
@@ -77,7 +77,7 @@ export default function HomePage() {
           >
             Oracle
           </a>
-          . With an M.S. in Human Factors &amp; Ergonomics (UX concentration)
+          . With an M.S. in Human Factors &amp; Ergonomics (UX Concentration)
           from{" "}
           <a
             className="link-blue"
