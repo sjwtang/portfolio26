@@ -56,9 +56,8 @@ export default function HomePage() {
             color: "#333333",
           }}
         >
-          Shirley is a <strong style={{ fontWeight: 700 }}>user experience designer</strong>{" "}
-          who strives to craft empowering experiences. Her work is driven by
-          curiosity and a desire to keep learning.
+          Shirley Tang is a UX designer creating thoughtful experiences for
+          complex, AI-enabled products.
         </p>
         <p
           style={{
@@ -68,25 +67,29 @@ export default function HomePage() {
             color: "#333333",
           }}
         >
-          Most recently, she designed agentic applications{" "}
+          Most recently, she designed{" "}
+          <span className="intro-highlight">agentic applications</span> at{" "}
           <a
             className="link-blue"
-            href="https://www.oracle.com/applications/"
+            href="https://www.oracle.com/human-capital-management/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @Oracle
-          </a>{" "}
-          and graduated from{" "}
+            Oracle
+          </a>
+          . With an M.S. in Human Factors &amp; Ergonomics (UX concentration)
+          from{" "}
           <a
             className="link-blue"
             href="https://www.sjsu.edu/hfe/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @SJSU
+            SJSU
           </a>
-          &apos;26 with an M.S. Human Factors &amp; Ergonomics, UX Concentration.
+          &apos;26, she brings a{" "}
+          <span className="intro-highlight">human factors perspective</span> to
+          enterprise, healthcare, and accessibility-focused work.
         </p>
       </section>
 
