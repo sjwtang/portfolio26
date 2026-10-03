@@ -85,8 +85,8 @@ export default function HomePage() {
             color: "#333333",
           }}
         >
-          Shirley Tang is a UX designer who makes complex, AI-enabled products
-          clear and usable.
+          Shirley is a UX designer who makes complex, AI-enabled products clear
+          and usable.
         </p>
         <p
           style={{
