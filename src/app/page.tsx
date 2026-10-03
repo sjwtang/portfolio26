@@ -4,17 +4,22 @@ import Link from "next/link";
 const projects: {
   href: string;
   image: string;
+  imageAlt: string;
   badge: string;
   badgeWidth: number;
   badgeHeight: number;
   title: string;
   description: string;
-  award?: string;
+  imageBadge?: {
+    label: string;
+    wide?: boolean;
+  };
   tags?: string[];
 }[] = [
   {
     href: "/oracle-hcm",
     image: "/images/oracle-card.png",
+    imageAlt: "Mobile calendar where nurses select shifts",
     badge: "/images/oracle-badge.png",
     badgeWidth: 63,
     badgeHeight: 40,
@@ -26,6 +31,7 @@ const projects: {
   {
     href: "/goodmaps",
     image: "/images/goodmaps-card.png",
+    imageAlt: "Mobile indoor navigation route",
     badge: "/images/goodmaps-badge.png",
     badgeWidth: 41,
     badgeHeight: 40,
@@ -33,11 +39,14 @@ const projects: {
     description:
       "Redesigning indoor navigation to help people with diverse accessibility needs confidently navigate unfamiliar spaces",
     tags: ["Accessibility", "B2C", "Navigation", "Mobile"],
-    award: "+250% MAU Growth",
+    imageBadge: {
+      label: "+250% MAU after redesign",
+    },
   },
   {
     href: "/acme",
     image: "/images/acme-card.png",
+    imageAlt: "Desktop fraud investigation dashboard with charts and case table",
     badge: "/images/acme-badge.png",
     badgeWidth: 95,
     badgeHeight: 40,
@@ -49,14 +58,18 @@ const projects: {
   {
     href: "/navipath",
     image: "/images/navipath-card.png",
+    imageAlt: "Laptop showing AI-assisted mitosis search on a tissue scan",
     badge: "/images/navipath-badge.png",
     badgeWidth: 99,
     badgeHeight: 40,
     title: "NaviPath: AI-Assisted Mitosis Search",
-    award: "Honorable Mention @ ACM CHI '23",
     description:
       "Exploring how AI can help pathologists search for mitosis while keeping experts in control",
     tags: ["AI", "Healthcare", "Human-AI Interaction", "Web"],
+    imageBadge: {
+      label: "Honorable Mention @ ACM CHI '23",
+      wide: true,
+    },
   },
 ];
 
@@ -93,17 +106,8 @@ export default function HomePage() {
           >
             Oracle
           </a>
-          . With an M.S. in Human Factors &amp; Ergonomics (UX Concentration)
-          from{" "}
-          <a
-            className="link-blue"
-            href="https://www.sjsu.edu/hfe/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            SJSU
-          </a>
-          &apos;26, she brings a{" "}
+          . With an M.S. in Human Factors &amp; Ergonomics (UX Concentration),
+          she brings a{" "}
           <span className="intro-highlight">human factors perspective</span> to
           enterprise, healthcare, and accessibility-focused work.
         </p>
@@ -126,42 +130,31 @@ export default function HomePage() {
         />
       </div>
 
-      <section
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-          columnGap: 50,
-          rowGap: 80,
-        }}
-        className="project-grid"
-      >
+      <ul className="project-grid">
         {projects.map((project) => (
-          <article
-            key={project.href}
-            style={{
-              maxWidth: 678,
-              display: "flex",
-              flexDirection: "column",
-              gap: 20,
-            }}
-          >
-            <Link href={project.href} className="project-image-link">
+          <li key={project.href} className="project-item">
+            <div className="project-item-media">
               <Image
                 src={project.image}
-                alt=""
+                alt={project.imageAlt}
                 width={1485}
                 height={1329}
-                className="project-image"
+                className="project-item-image"
               />
-            </Link>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 20,
-              }}
-            >
-              <div className="project-badge">
+              {project.imageBadge ? (
+                <span
+                  className={
+                    project.imageBadge.wide
+                      ? "project-item-badge project-item-badge--wide"
+                      : "project-item-badge"
+                  }
+                >
+                  {project.imageBadge.label}
+                </span>
+              ) : null}
+            </div>
+            <div className="project-copy">
+              <div className="project-logo">
                 <Image
                   src={project.badge}
                   alt=""
@@ -169,28 +162,14 @@ export default function HomePage() {
                   height={project.badgeHeight}
                 />
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 16,
-                }}
-              >
-                <Link href={project.href} className="project-title">
-                  {project.title}
-                </Link>
+              <div className="project-text">
+                <h2 className="project-item-title">
+                  <Link href={project.href} className="project-item-link">
+                    {project.title}
+                  </Link>
+                </h2>
                 <div className="project-meta">
-                  <p
-                    style={{
-                      fontSize: 18,
-                      fontWeight: 400,
-                      lineHeight: "27px",
-                      margin: 0,
-                      color: "#333333",
-                    }}
-                  >
-                    {project.description}
-                  </p>
+                  <p className="project-description">{project.description}</p>
                   {project.tags ? (
                     <p className="project-tags">
                       {project.tags.map((tag, index) => (
@@ -209,23 +188,12 @@ export default function HomePage() {
                       ))}
                     </p>
                   ) : null}
-                  {project.award ? (
-                    <p className="project-award">{project.award}</p>
-                  ) : null}
                 </div>
               </div>
             </div>
-          </article>
+          </li>
         ))}
-      </section>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .project-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
+      </ul>
     </div>
   );
 }

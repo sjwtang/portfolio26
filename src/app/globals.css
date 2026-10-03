@@ -455,32 +455,157 @@ img {
   text-decoration: none;
 }
 
-.project-image-link {
-  display: block;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 50px;
+  row-gap: 80px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 678px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.project-item-media {
+  position: relative;
   overflow: hidden;
   width: 100%;
   aspect-ratio: 1485 / 1329;
+  border-radius: 16px;
 }
 
-.project-image {
+.project-item-image {
   display: block;
   width: 100% !important;
   height: 100% !important;
   object-fit: cover;
-  transition: transform 0.35s ease;
+  transition: transform 250ms ease-out;
 }
 
-.project-image-link:hover .project-image {
-  transform: scale(1.03);
+.project-item:hover .project-item-image,
+.project-item:has(.project-item-link:focus-visible) .project-item-image {
+  transform: scale(1.04);
 }
 
-.project-badge {
+.project-item:hover .project-item-link,
+.project-item:has(.project-item-link:focus-visible) .project-item-link {
+  text-decoration: underline;
+}
+
+.project-item:has(.project-item-link:focus-visible) {
+  outline: 2px solid #0099ff;
+  outline-offset: 4px;
+}
+
+.project-item-link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.project-item-link:focus {
+  outline: none;
+}
+
+.project-item-link:focus-visible {
+  outline: none;
+}
+
+/* Stretched link: hit area is the item bounds only (not grid gaps) */
+.project-item-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-item-image {
+    transition: none;
+  }
+
+  .project-item:hover .project-item-image,
+  .project-item:has(.project-item-link:focus-visible) .project-item-image {
+    transform: none;
+  }
+}
+
+.project-item-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 6px;
+  row-gap: 0;
+  max-width: min(168px, calc(42% - 16px));
+  padding: 3px 8px;
+  border-radius: 15px;
+  background: #fcefc7;
+  color: #222222;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  pointer-events: none;
+  user-select: none;
+}
+
+.project-item-badge--wide {
+  max-width: calc(100% - 32px);
+  width: max-content;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 900px) {
+  .project-item-badge {
+    max-width: min(148px, calc(42% - 16px));
+    padding: 2px 7px;
+    font-size: 11px;
+  }
+
+  .project-item-badge--wide {
+    max-width: calc(100% - 32px);
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-item-badge {
+    max-width: min(132px, calc(42% - 16px));
+    padding: 2px 6px;
+    font-size: 10px;
+  }
+
+  .project-item-badge--wide {
+    max-width: calc(100% - 32px);
+    font-size: 10px;
+  }
+}
+
+.project-logo {
   display: flex;
   align-items: center;
   height: 40px;
 }
 
-.project-badge img {
+.project-logo img {
   display: block;
   width: auto !important;
   height: 40px !important;
@@ -488,17 +613,42 @@ img {
   object-fit: contain;
 }
 
-.project-title {
-  display: block;
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.project-item-title {
   font-size: 24px;
   font-weight: 700;
-  line-height: 28.8px;
+  line-height: 1.15;
   color: #333333;
   margin: 0;
 }
 
-.project-title:hover {
-  text-decoration: underline;
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.875rem;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  color: #333333;
 }
 
 .project-tags {
@@ -513,30 +663,6 @@ img {
 .project-tags-sep {
   font-weight: 400;
   color: #bbbbbb;
-}
-
-.project-award {
-  display: inline-block;
-  width: fit-content;
-  max-width: 100%;
-  align-self: flex-start;
-  margin: 4px 0 0;
-  padding: 4px 12px;
-  border-radius: 15px;
-  background: #fcefc7;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 21.6px;
-  color: #333333;
-  text-align: left;
-}
-
-.project-meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-  text-align: left;
 }
 
 .caption {
