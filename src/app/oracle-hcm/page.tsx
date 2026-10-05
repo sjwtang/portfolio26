@@ -164,6 +164,52 @@ export default function OraclePage() {
           framed
         />
 
+        <CaseTextBlock>
+          <h2>Utilizing AI to reduce scheduling efforts</h2>
+          <p>
+            Due to complex scheduling requirements and personal needs, I explored
+            how AI could help surface viable scheduling options to reduce the
+            initial manual work of building a schedule from scratch. Instead of
+            nurses choosing individual shifts for each scheduling period, the
+            system can automatically recommend a schedule of shifts based on the
+            nurse&apos;s known preferences, seniority status, department and
+            hospital&apos;s needs, state laws, and more.
+          </p>
+        </CaseTextBlock>
+
+        <CaseImage
+          src="/images/oracle-ai-recommended.png"
+          alt="Two phone screens showing self-scheduling opening and an AI-recommended schedule with time of day, compatible shifts, and day off callouts"
+          width={932}
+          height={274}
+          caption="View AI-recommended schedule"
+          framed
+        />
+
+        <CaseTextBlock>
+          <p>
+            What happens if a nurse has a new constraint to account for that
+            wasn&apos;t considered in the initial recommended schedule? Aside from
+            retaining the ability to make manual edits, I designed a workflow to
+            allow nurses to dynamically generate new, optimized schedules via
+            natural language.
+          </p>
+          <p>
+            For example, if Amanda wanted to update her preferences or could no
+            longer work a scheduled day, she could simply specify her needs and
+            the system can present some alternative schedules for her to take on.
+          </p>
+        </CaseTextBlock>
+
+        <CaseImage
+          src="/images/oracle-ai-edits.png"
+          alt="Three phone screens showing a nurse prompting for schedule changes, reviewing alternate AI-generated options, and confirming an updated schedule"
+          width={890}
+          height={286}
+          caption="Edit and generate alternate schedules by prompting"
+          framed
+        />
+
         <hr className="case-divider" />
 
         <CaseTextBlock>
