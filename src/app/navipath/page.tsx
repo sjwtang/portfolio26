@@ -136,7 +136,7 @@ export default function NaviPathPage() {
         <hr className="case-divider" />
 
         <CaseTextBlock>
-          <h2>The problem</h2>
+          <h2>Finding mitoses in digitized tissue scans is time-consuming</h2>
           <p>
             Previous literature suggests pathologist constraints with time,
             focus, and price when using digital pathology tools compared to
@@ -158,7 +158,7 @@ export default function NaviPathPage() {
         </CaseCallout>
 
         <CaseTextBlock>
-          <h2>Reviewing technical needs</h2>
+          <h2>Levels of magnification needed in the mitosis workflow</h2>
           <p>
             One of the technical needs involved four levels of magnification that
             pathologists could use to look for mitosis: a tissue level that shows
@@ -204,7 +204,7 @@ export default function NaviPathPage() {
         </CaseImage>
 
         <CaseTextBlock>
-          <h2>Aligning with system requirements</h2>
+          <h2>A need for a multi-faceted, self-explainable, and adjustable system</h2>
           <p>
             System design requirements shifted as we continued to uncover user
             needs and technical constraints. These requirements included the
@@ -254,7 +254,7 @@ export default function NaviPathPage() {
         />
 
         <CaseTextBlock>
-          <h2>Challenges</h2>
+          <h2>Exploring how to represent mitosis criteria</h2>
           <p>
             One challenge was determining how to represent the criteria that
             users could toggle to actively filter recommendations. During the

@@ -227,7 +227,7 @@ export default function GoodMapsPage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>DESIGN SPRINT</CaseSectionLabel>
-          <h2>Identifying key challenges</h2>
+          <h2>Identifying key challenges and needs of indoor navigation</h2>
           <p>
             After wrapping up research, we entered a week-long design sprint to
             identify the top 5 challenges to solve with the product. This sprint
@@ -255,7 +255,7 @@ export default function GoodMapsPage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>DESIGN</CaseSectionLabel>
-          <h2>Defining the high level user experience</h2>
+          <h2>Defining how to display building information, points of interest, and more</h2>
           <p>
             One of the biggest challenges when initially designing was identifying
             which features to prioritize while considering aspects like gaps in
@@ -325,7 +325,7 @@ export default function GoodMapsPage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>TEST</CaseSectionLabel>
-          <h2>Validating designs with users</h2>
+          <h2>Conducting user acceptance testing sessions to validate core features</h2>
           <p>
             Several rounds of user acceptance testing sessions were conducted to
             validate designs surrounding core experiences and features. As we

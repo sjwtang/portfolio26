@@ -228,7 +228,7 @@ export default function AcmePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>IDEATION</CaseSectionLabel>
-          <h2>Defining the conceptual model</h2>
+          <h2>Defining the objects and actions of the design</h2>
           <p>
             To establish the interaction language (aka the &quot;grammar&quot; of
             the design) and guide user flows, I defined all possible objects and
@@ -296,7 +296,7 @@ export default function AcmePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>DESIGN</CaseSectionLabel>
-          <h2>Wireframes and initial concepts</h2>
+          <h2>Visualizing investigator performance through total cases closed and accuracy</h2>
           <p>
             Starting with wireframes and using the Salesforce design system, I
             began by exploring some visualizations that could assist an
@@ -327,7 +327,7 @@ export default function AcmePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>VALIDATION</CaseSectionLabel>
-          <h2>Stakeholder feedback</h2>
+          <h2>Iterating on feedback of reducing cognitive load</h2>
           <p>
             Feedback from the project stakeholder centered around requesting
             assists, specifically, the lack of being able to access assisted
@@ -357,7 +357,7 @@ export default function AcmePage() {
         <hr className="case-divider" />
 
         <CaseTextBlock>
-          <h2>Final Shipped Designs</h2>
+          <h2>Final shipped designs</h2>
         </CaseTextBlock>
 
         <div className="acme-finals">
@@ -382,7 +382,7 @@ export default function AcmePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>REFLECTION</CaseSectionLabel>
-          <h2>Food for Thought</h2>
+          <h2>Food for thought</h2>
           <ul>
             <li>
               When adding visualizations, it is important to not forget what
