@@ -218,6 +218,8 @@ export function CaseImage({
   frameClassName,
   imageStyle,
   objectFit,
+  quality,
+  unoptimized = false,
   children,
 }: {
   src?: string;
@@ -231,6 +233,8 @@ export function CaseImage({
   frameClassName?: string;
   imageStyle?: CSSProperties;
   objectFit?: CSSProperties["objectFit"];
+  quality?: number;
+  unoptimized?: boolean;
   children?: ReactNode;
 }) {
   const frameClass = framed
@@ -258,6 +262,8 @@ export function CaseImage({
               height={height}
               fillTrigger
               caption={caption}
+              quality={quality}
+              unoptimized={unoptimized}
               style={{
                 width: "100%",
                 height: objectFit ? "100%" : "auto",

@@ -132,10 +132,11 @@ export default function OraclePage() {
         <CaseImage
           src="/images/oracle-research-workflow.png"
           alt="Nurses using official scheduling software then hopping into third-party apps to better visualize their shifts"
-          width={1024}
-          height={332}
+          width={2180}
+          height={708}
           caption="Nurses unable to effectively plan and visualize their scheduling commitments"
           framed
+          unoptimized
         />
 
         <CaseTextBlock>
