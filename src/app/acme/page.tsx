@@ -410,7 +410,7 @@ export default function AcmePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>REFLECTION</CaseSectionLabel>
-          <h2>Food for thought</h2>
+          <h2>Learnings</h2>
           <ul>
             <li>
               When adding visualizations, it is important to not forget what

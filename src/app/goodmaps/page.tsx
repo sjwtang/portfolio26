@@ -17,8 +17,8 @@ export default function GoodMapsPage() {
         subtitle="Creating an accessible wayfinding app to navigate inside complex buildings"
         image="/images/gm-hero.png"
         imageAlt="GoodMaps indoor navigation app screens"
-        imageWidth={1024}
-        imageHeight={636}
+        imageWidth={1600}
+        imageHeight={995}
         imageQuality={100}
         imageUnoptimized
         framed
