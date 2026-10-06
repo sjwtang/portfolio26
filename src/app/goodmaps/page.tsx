@@ -23,8 +23,8 @@ export default function GoodMapsPage() {
         imageUnoptimized
         framed
         divider={false}
-        titleGap={24}
-        framePadding="40px 0 0"
+        titleGap={28}
+        framePadding="0"
         frameClassName="case-hero-frame gm-hero-frame case-hero-media--plain"
         heroFooter={
           <div className="gm-tool-logos">

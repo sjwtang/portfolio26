@@ -70,7 +70,7 @@ export default function AcmePage() {
         framed
         divider={false}
         titleGap={28}
-        framePadding="40px 0"
+        framePadding="0"
         frameClassName="case-hero-frame acme-hero-frame case-hero-media--plain"
         tldr={
           <div className="case-tldr">

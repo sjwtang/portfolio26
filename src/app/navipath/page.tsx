@@ -21,8 +21,8 @@ export default function NaviPathPage() {
         imageHeight={744}
         framed
         divider={false}
-        titleGap={24}
-        framePadding="40px 0"
+        titleGap={28}
+        framePadding="0"
         frameClassName="case-hero-frame np-hero-frame case-hero-media--plain"
         tldr={
           <div className="case-tldr">
