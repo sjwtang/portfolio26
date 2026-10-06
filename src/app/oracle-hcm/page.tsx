@@ -43,7 +43,7 @@ export default function OraclePage() {
               </li>
               <li>
                 <strong>Outcome:</strong> My approach was adopted into the HCM
-                team&apos;s long-term product vision, influencing product
+                team&apos;s product vision, influencing product
                 direction.
               </li>
             </ul>
@@ -192,6 +192,7 @@ export default function OraclePage() {
           height={613}
           caption="User flows and concept sketches"
           framed
+          framePadding="40px clamp(16px, 3vw, 47px)"
         />
 
         <CaseTextBlock>
@@ -214,6 +215,7 @@ export default function OraclePage() {
           height={274}
           caption="View AI-recommended schedule"
           framed
+          framePadding="40px clamp(16px, 3vw, 47px)"
         />
 
         <CaseTextBlock>
@@ -238,6 +240,7 @@ export default function OraclePage() {
           height={286}
           caption="Edit and generate alternate schedules by prompting"
           framed
+          framePadding="40px clamp(16px, 3vw, 47px)"
         />
 
         <hr className="case-divider" />
@@ -251,7 +254,7 @@ export default function OraclePage() {
           </p>
           <p>
             My approach was adopted into the Human Capital Management (HCM)
-            team&apos;s long term aspirational designs, influencing the long-term
+            team&apos;s aspirational designs, influencing the
             vision and product direction.
           </p>
           <p>To recap, my solution helps Amanda:</p>
@@ -267,7 +270,7 @@ export default function OraclePage() {
           alt="Self scheduling week view, October 25, week of October 12-18. User has 3 shifts scheduled totalling at 36 hours for the week."
           width={999}
           height={690}
-          caption="Scheduling week view (note: design has been modified from original design system)"
+          caption="Scheduling week view and requirements warning"
           framed
         />
 
