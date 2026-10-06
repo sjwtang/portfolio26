@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -27,6 +28,9 @@ export function Header() {
           <Link
             href="/"
             style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
               fontSize: 32,
               fontWeight: 500,
               letterSpacing: "-0.32px",
@@ -34,6 +38,19 @@ export function Header() {
               color: "#111111",
             }}
           >
+            <Image
+              src="/images/header-icon.png"
+              alt=""
+              width={32}
+              height={32}
+              style={{
+                width: "1em",
+                height: "1em",
+                objectFit: "contain",
+                flexShrink: 0,
+              }}
+              aria-hidden
+            />
             Shirley Tang
           </Link>
           <nav style={{ display: "flex", gap: 51, alignItems: "center" }}>

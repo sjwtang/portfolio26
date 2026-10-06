@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/BackToTop";
 import {
   CaseCallout,
   CaseHero,
@@ -63,7 +64,7 @@ export default function OraclePage() {
           alt="Timeline from August to October, where self-scheduling opens August 10, closes August 23, schedule publishes September 1, and schedule period occurs October 4-November 14"
           width={999}
           height={209}
-          caption="Example of a typical self-scheduling timeline"
+          caption="Example of self-scheduling timeline"
           framed
         />
 
@@ -149,9 +150,8 @@ export default function OraclePage() {
           <h2>Concept exploration</h2>
           <p>
             I established a high level user flow to guide my concept sketches and
-            experimented with different design approaches, all the while
-            evaluating whether the concepts would actually help Amanda meet her
-            user goals.
+            experimented with different design approaches while evaluating whether
+            the concepts would actually help Amanda meet her user goals.
           </p>
         </CaseTextBlock>
 
@@ -220,7 +220,7 @@ export default function OraclePage() {
             a schedule.
           </p>
           <p>
-            My approach will be adopted into the Human Capital Management (HCM)
+            My approach was adopted into the Human Capital Management (HCM)
             team&apos;s long term aspirational designs, influencing the long-term
             vision and product direction.
           </p>
@@ -247,18 +247,18 @@ export default function OraclePage() {
           <CaseSectionLabel>REFLECTION</CaseSectionLabel>
           <h2>Learnings</h2>
           <p>
-            Some learnings, among many others, that I took away from this project
+            Some learnings, among many others, that I will be taking with me
             include:
           </p>
           <ul>
-            <li>Not losing sight of user goals while designing</li>
+            <li>not losing sight of user goals while designing</li>
             <li>
-              Making sure I&apos;m focusing on a specific problem and that
-              it&apos;s the right problem
+              making sure I&apos;m focusing on a specific problem and that
+              it&apos;s the right problem, and
             </li>
             <li>
-              Always effectively rationalizing and explaining the motivations
-              behind my design decisions
+              making sure I am effectively rationalizing and explaining the
+              motivations behind my design decisions
             </li>
           </ul>
           <p>
@@ -281,6 +281,8 @@ export default function OraclePage() {
             !
           </p>
         </CaseTextBlock>
+
+        <BackToTop />
       </div>
     </article>
   );

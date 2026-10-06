@@ -2,15 +2,34 @@
 
 import Image from "next/image";
 import {
+  createContext,
   useCallback,
+  useContext,
   useEffect,
   useId,
   useState,
   type CSSProperties,
   type KeyboardEvent,
   type MouseEvent,
+  type ReactNode,
 } from "react";
 import { createPortal } from "react-dom";
+
+const ExpandableCaptionContext = createContext<string | undefined>(undefined);
+
+export function ExpandableCaptionProvider({
+  caption,
+  children,
+}: {
+  caption?: string;
+  children: ReactNode;
+}) {
+  return (
+    <ExpandableCaptionContext.Provider value={caption}>
+      {children}
+    </ExpandableCaptionContext.Provider>
+  );
+}
 
 type ExpandableImageProps = {
   src: string;
@@ -21,6 +40,7 @@ type ExpandableImageProps = {
   fillTrigger?: boolean;
   className?: string;
   style?: CSSProperties;
+  caption?: string;
 };
 
 export function ExpandableImage({
@@ -32,10 +52,14 @@ export function ExpandableImage({
   fillTrigger = false,
   className,
   style,
+  caption,
 }: ExpandableImageProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const titleId = useId();
+  const captionId = useId();
+  const contextCaption = useContext(ExpandableCaptionContext);
+  const lightboxCaption = caption ?? contextCaption;
 
   useEffect(() => {
     setMounted(true);
@@ -100,6 +124,7 @@ export function ExpandableImage({
               role="dialog"
               aria-modal="true"
               aria-labelledby={titleId}
+              aria-describedby={lightboxCaption ? captionId : undefined}
               onClick={onBackdropClick}
             >
               <p id={titleId} className="sr-only">
@@ -116,6 +141,11 @@ export function ExpandableImage({
               <div className="image-lightbox-content">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={src} alt={alt} className="image-lightbox-img" />
+                {lightboxCaption ? (
+                  <p id={captionId} className="image-lightbox-caption">
+                    {lightboxCaption}
+                  </p>
+                ) : null}
               </div>
             </div>,
             document.body,

@@ -97,7 +97,19 @@ export default function HomePage() {
           }}
         >
           Most recently, she designed{" "}
-          <span className="intro-highlight">AI-assisted workflows</span> at{" "}
+          <span className="intro-highlight">
+            <span className="intro-highlight-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            <span className="intro-highlight-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            <span className="intro-highlight-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            AI-assisted workflows
+          </span>{" "}
+          at{" "}
           <a
             className="link-blue"
             href="https://www.oracle.com/human-capital-management/"
@@ -108,7 +120,19 @@ export default function HomePage() {
           </a>
           . With an M.S. in Human Factors &amp; Ergonomics (UX Concentration),
           she brings a{" "}
-          <span className="intro-highlight">human factors perspective</span> to
+          <span className="intro-highlight">
+            <span className="intro-highlight-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            <span className="intro-highlight-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            <span className="intro-highlight-sparkle" aria-hidden="true">
+              ✨
+            </span>
+            human factors perspective
+          </span>{" "}
+          to
           enterprise, healthcare, and accessibility-focused work.
         </p>
       </section>

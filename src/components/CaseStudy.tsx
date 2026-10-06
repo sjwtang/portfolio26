@@ -1,5 +1,8 @@
 import type { CSSProperties, ReactNode } from "react";
-import { ExpandableImage } from "@/components/ExpandableImage";
+import {
+  ExpandableCaptionProvider,
+  ExpandableImage,
+} from "@/components/ExpandableImage";
 
 type MetaPair = {
   label: string;
@@ -208,30 +211,33 @@ export function CaseImage({
 
   return (
     <figure className="case-figure">
-      <div className={frameClass} style={style}>
-        {children ? (
-          children
-        ) : src && alt != null && width != null && height != null ? (
-          <ExpandableImage
-            src={src}
-            alt={alt}
-            width={width}
-            height={height}
-            fillTrigger
-            style={{
-              width: "100%",
-              height: objectFit ? "100%" : "auto",
-              ...(objectFit
-                ? {
-                    aspectRatio: `${width} / ${height}`,
-                    objectFit,
-                  }
-                : null),
-              ...imageStyle,
-            }}
-          />
-        ) : null}
-      </div>
+      <ExpandableCaptionProvider caption={caption}>
+        <div className={frameClass} style={style}>
+          {children ? (
+            children
+          ) : src && alt != null && width != null && height != null ? (
+            <ExpandableImage
+              src={src}
+              alt={alt}
+              width={width}
+              height={height}
+              fillTrigger
+              caption={caption}
+              style={{
+                width: "100%",
+                height: objectFit ? "100%" : "auto",
+                ...(objectFit
+                  ? {
+                      aspectRatio: `${width} / ${height}`,
+                      objectFit,
+                    }
+                  : null),
+                ...imageStyle,
+              }}
+            />
+          ) : null}
+        </div>
+      </ExpandableCaptionProvider>
       {caption ? <figcaption className="case-caption">{caption}</figcaption> : null}
     </figure>
   );

@@ -1,3 +1,4 @@
+import { BackToTop } from "@/components/BackToTop";
 import {
   CaseCallout,
   CaseHero,
@@ -416,6 +417,8 @@ export default function NaviPathPage() {
             </li>
           </ul>
         </CaseTextBlock>
+
+        <BackToTop />
       </div>
     </article>
   );

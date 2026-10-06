@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BackToTop } from "@/components/BackToTop";
 import {
   CaseHero,
   CaseImage,
@@ -474,6 +475,7 @@ export default function GoodMapsPage() {
               alt="Gif of routing through a conference hall"
               width={219}
               height={475}
+              caption="Routing at NAIDEX accessibility conference"
             />
           </PhoneFrame>
           <figcaption className="case-caption">
@@ -508,6 +510,8 @@ export default function GoodMapsPage() {
             </li>
           </ul>
         </CaseTextBlock>
+
+        <BackToTop />
       </div>
     </article>
   );

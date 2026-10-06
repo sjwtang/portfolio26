@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BackToTop } from "@/components/BackToTop";
 import {
   CaseCallout,
   CaseHero,
@@ -403,6 +404,8 @@ export default function AcmePage() {
             </li>
           </ul>
         </CaseTextBlock>
+
+        <BackToTop />
       </div>
     </article>
   );
