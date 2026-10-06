@@ -87,7 +87,7 @@ export default function OraclePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>RESEARCH</CaseSectionLabel>
-          <h2>Identifying nurse challenges and needs</h2>
+          <h2>Nurses face a complex, error-prone scheduling process</h2>
           <p>
             There were 3 main pain points that I used to motivate my design
             solutions. These pain points included:
@@ -147,7 +147,7 @@ export default function OraclePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>IDEATION</CaseSectionLabel>
-          <h2>Concept exploration</h2>
+          <h2>Exploring primary month views and flight-picker inspired concepts</h2>
           <p>
             I established a high level user flow to guide my concept sketches and
             experimented with different design approaches while evaluating whether
@@ -165,7 +165,7 @@ export default function OraclePage() {
         />
 
         <CaseTextBlock>
-          <h2>Utilizing AI to reduce scheduling efforts</h2>
+          <h2>Utilizing AI to recommend schedules and propose alternatives</h2>
           <p>
             Due to complex scheduling requirements and personal needs, I explored
             how AI could help surface viable scheduling options to reduce the
