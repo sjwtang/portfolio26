@@ -156,14 +156,79 @@ export default function AboutPage() {
           <h2>Other things I enjoy..</h2>
         </div>
 
-        <figure className="about-hobbies">
-          <Image
-            src="/images/about-hobbies.jpg"
-            alt="Exploring new cafes, watching kdramas, dancing, and embroidering"
-            width={2048}
-            height={1856}
-            style={{ width: "100%", maxWidth: 1044, height: "auto" }}
-          />
+        <figure
+          className="about-hobbies"
+          aria-label="Exploring new cafes and eats, dancing, enjoying nature, and dog doodles"
+        >
+          <div className="about-hobbies-tile">
+            <div className="about-hobby about-hobby--flower">
+              <Image
+                src="/images/hobbies/flower.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 30vw, 195px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="about-hobby about-hobby--beach">
+              <Image
+                src="/images/hobbies/beach.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 30vw, 195px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="about-hobby about-hobby--matcha">
+              <Image
+                src="/images/hobbies/matcha.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 28vw, 178px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="about-hobby about-hobby--nature">
+              <Image
+                src="/images/hobbies/nature.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 28vw, 176px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="about-hobby about-hobby--dance">
+              <div className="about-hobby-dance-media">
+                {/* unoptimized keeps the GIF animated */}
+                <Image
+                  src="/images/hobbies/dance.gif"
+                  alt="Dancing"
+                  width={800}
+                  height={1732}
+                  unoptimized
+                  className="about-hobby-dance-img"
+                />
+              </div>
+            </div>
+            <div className="about-hobby about-hobby--cafe">
+              <Image
+                src="/images/hobbies/cafe.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 28vw, 181px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <Image
+              className="about-hobby-overlay"
+              src="/images/hobbies/overlay.png"
+              alt=""
+              width={2224}
+              height={1668}
+              priority={false}
+              unoptimized
+            />
+          </div>
         </figure>
 
         <div className="about-resume-card">
