@@ -8,13 +8,13 @@ const connect = [
     external: true,
   },
   {
-    label: "Email",
-    href: "mailto:sjwtang@gmail.com?subject=Shirley%20Tang%20portfolio%20inquiry",
+    label: "Resume",
+    href: "/ShirleyTang_Resume.pdf",
     external: true,
   },
   {
-    label: "Resume",
-    href: "/ShirleyTang_Resume.pdf",
+    label: "Email",
+    href: "mailto:sjwtang@gmail.com?subject=Shirley%20Tang%20portfolio%20inquiry",
     external: true,
   },
 ];
