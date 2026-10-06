@@ -127,6 +127,18 @@ export default function OraclePage() {
             <li>There is a constant concern of accidentally overscheduling</li>
             <li>Strategizing and comparing shifts is mentally exhausting</li>
           </ol>
+        </CaseTextBlock>
+
+        <CaseImage
+          src="/images/oracle-research-workflow.png"
+          alt="Nurses using official scheduling software then hopping into third-party apps to better visualize their shifts"
+          width={1024}
+          height={332}
+          caption="Nurses unable to effectively plan and visualize their scheduling commitments"
+          framed
+        />
+
+        <CaseTextBlock>
           <p>
             To address these pain points, I needed to design a tool that will help
             nurses plan ahead, while giving them the freedom and control to choose
