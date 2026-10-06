@@ -16,6 +16,8 @@ export function CaseHero({
   imageAlt,
   imageWidth,
   imageHeight,
+  imageQuality,
+  imageUnoptimized = false,
   framed = false,
   divider = true,
   titleGap = 28,
@@ -23,6 +25,9 @@ export function CaseHero({
   frameGap,
   frameClassName,
   imageStyle,
+  beforeImage,
+  tldr,
+  layout = "default",
   heroFooter,
   metaLeft,
   metaRight,
@@ -34,6 +39,8 @@ export function CaseHero({
   imageAlt: string;
   imageWidth: number;
   imageHeight: number;
+  imageQuality?: number;
+  imageUnoptimized?: boolean;
   framed?: boolean;
   divider?: boolean;
   titleGap?: number;
@@ -41,72 +48,98 @@ export function CaseHero({
   frameGap?: number;
   frameClassName?: string;
   imageStyle?: CSSProperties;
+  beforeImage?: ReactNode;
+  tldr?: ReactNode;
+  layout?: "default" | "split";
   heroFooter?: ReactNode;
   metaLeft: MetaPair[];
   metaRight: MetaPair[];
   skills?: string[];
 }) {
-  return (
-    <div className="case-shell" style={{ paddingTop: 80 }}>
-      <div style={{ display: "flex", flexDirection: "column", gap: titleGap }}>
-        <h1
-          style={{
-            fontSize: 40,
-            fontWeight: 700,
-            lineHeight: "48px",
-            margin: 0,
-            color: "#333333",
-          }}
-        >
-          {title}
-        </h1>
-        <p
-          style={{
-            fontSize: 24,
-            fontWeight: 400,
-            lineHeight: "28.8px",
-            margin: 0,
-            color: "#333333",
-          }}
-        >
-          {subtitle}
-        </p>
-      </div>
+  const isSplit = layout === "split";
+  const imageFrame = (
+    <div
+      className={`case-hero-media${frameClassName ? ` ${frameClassName}` : ""}${framed ? " case-hero-media--framed" : ""}${isSplit ? " case-hero-media--split" : ""}`}
+      style={
+        framed
+          ? {
+              padding: framePadding,
+              gap: frameGap,
+            }
+          : undefined
+      }
+    >
+      <ExpandableImage
+        src={image}
+        alt={imageAlt}
+        width={imageWidth}
+        height={imageHeight}
+        priority
+        quality={imageQuality}
+        unoptimized={imageUnoptimized}
+        fillTrigger={!framed || Boolean(heroFooter) || isSplit}
+        style={{
+          width: framed && !heroFooter && !isSplit ? "auto" : isSplit ? "auto" : "100%",
+          maxWidth: "100%",
+          height: "auto",
+          ...imageStyle,
+        }}
+      />
+      {heroFooter}
+    </div>
+  );
 
-      <div
-        className={frameClassName}
-        style={
-          framed
-            ? {
-                background: "#f5f5f5",
-                borderRadius: 8,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: framePadding,
-                gap: frameGap,
-                marginTop: 50,
-              }
-            : { marginTop: 50 }
-        }
+  const titleBlock = (
+    <div
+      className="case-hero-copy"
+      style={{ display: "flex", flexDirection: "column", gap: titleGap }}
+    >
+      <h1
+        style={{
+          fontSize: 40,
+          fontWeight: 700,
+          lineHeight: "48px",
+          margin: 0,
+          color: "#333333",
+        }}
       >
-        <ExpandableImage
-          src={image}
-          alt={imageAlt}
-          width={imageWidth}
-          height={imageHeight}
-          priority
-          fillTrigger={!framed || Boolean(heroFooter)}
-          style={{
-            width: framed && !heroFooter ? "auto" : "100%",
-            maxWidth: "100%",
-            height: "auto",
-            ...imageStyle,
-          }}
-        />
-        {heroFooter}
-      </div>
+        {title}
+      </h1>
+      <p
+        style={{
+          fontSize: 24,
+          fontWeight: 400,
+          lineHeight: "28.8px",
+          margin: 0,
+          color: "#333333",
+        }}
+      >
+        {subtitle}
+      </p>
+    </div>
+  );
+
+  return (
+    <div
+      className={`case-shell${isSplit ? " case-hero--split" : ""}`}
+      style={{ paddingTop: isSplit ? 40 : 80 }}
+    >
+      {isSplit ? (
+        <>
+          {titleBlock}
+          <div className="case-hero-stage">
+            <div className="case-hero-stage-image">{imageFrame}</div>
+          </div>
+        </>
+      ) : (
+        <>
+          {titleBlock}
+          {beforeImage ? (
+            <div style={{ marginTop: 50 }}>{beforeImage}</div>
+          ) : null}
+          {imageFrame}
+        </>
+      )}
 
       <div
         style={{
@@ -114,7 +147,7 @@ export function CaseHero({
           gridTemplateColumns: "1fr 1fr",
           columnGap: 50,
           rowGap: 25,
-          marginTop: 50,
+          marginTop: isSplit ? 32 : 50,
         }}
         className="case-meta"
       >
@@ -153,6 +186,8 @@ export function CaseHero({
           </div>
         </div>
       ) : null}
+
+      {tldr ? <div style={{ marginTop: 50 }}>{tldr}</div> : null}
 
       {divider ? <hr className="case-divider" style={{ marginTop: 50 }} /> : null}
 

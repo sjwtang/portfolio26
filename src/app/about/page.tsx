@@ -84,14 +84,14 @@ export default function AboutPage() {
         <OutlineButton href="https://www.linkedin.com/in/shirleyjtang">
           LinkedIn
         </OutlineButton>
+        <OutlineButton href="/ShirleyTang_Resume.pdf">
+          Resume
+        </OutlineButton>
         <OutlineButton
           href="mailto:sjwtang@gmail.com?subject=Shirley%20Tang%20portfolio%20inquiry"
           external={false}
         >
           Email
-        </OutlineButton>
-        <OutlineButton href="/ShirleyTang_Resume.pdf">
-          Resume
         </OutlineButton>
       </div>
 

@@ -23,7 +23,39 @@ export default function NaviPathPage() {
         divider={false}
         titleGap={24}
         framePadding="40px 0"
-        frameClassName="case-hero-frame np-hero-frame"
+        frameClassName="case-hero-frame np-hero-frame case-hero-media--plain"
+        tldr={
+          <div className="case-tldr">
+            <h2 className="case-tldr-heading">TL;DR</h2>
+            <ul className="case-tldr-list">
+              <li>
+                <strong>Problem:</strong> Pathologists searching digitized
+                tissue scans for mitoses face slow, tedious navigation, and they
+                want to stay in control when working with AI.
+              </li>
+              <li>
+                <strong>What I did:</strong> As UX Designer, I led research and
+                design for NaviPath, an AI-assisted navigation tool that guides
+                pathologists across magnification levels with recommendations
+                they can filter by cellular criteria. I synthesized user
+                interviews, prototyped from low to high fidelity with engineers,
+                and planned and moderated usability tests.
+              </li>
+              <li>
+                <strong>Outcome:</strong> In a study with 15 pathologists,
+                NaviPath significantly improved navigation efficiency,
+                precision, and recall (p&lt;0.05) over the comparison conditions.
+                I co-authored the resulting paper, which received an Honorable
+                Mention at ACM CHI 2023.
+              </li>
+            </ul>
+            <div className="case-tldr-actions">
+              <a className="case-tldr-jump" href="#final-shipped-designs">
+                Jump to shipped designs ↓
+              </a>
+            </div>
+          </div>
+        }
         metaLeft={[
           { label: "Role", value: "UX Designer" },
           { label: "Collaborators", value: "Hongyan Gu" },
@@ -374,7 +406,7 @@ export default function NaviPathPage() {
         <hr className="case-divider" />
 
         <CaseTextBlock>
-          <h2>Final shipped designs</h2>
+          <h2 id="final-shipped-designs">Final shipped designs</h2>
         </CaseTextBlock>
 
         <div className="np-final">

@@ -17,13 +17,15 @@ export default function GoodMapsPage() {
         subtitle="Creating an accessible wayfinding app to navigate inside complex buildings"
         image="/images/gm-hero.png"
         imageAlt="GoodMaps indoor navigation app screens"
-        imageWidth={1300}
-        imageHeight={623}
+        imageWidth={1024}
+        imageHeight={636}
+        imageQuality={100}
+        imageUnoptimized
         framed
         divider={false}
         titleGap={24}
-        framePadding="40px 0"
-        frameClassName="case-hero-frame gm-hero-frame"
+        framePadding="40px 0 0"
+        frameClassName="case-hero-frame gm-hero-frame case-hero-media--plain"
         heroFooter={
           <div className="gm-tool-logos">
             <a
@@ -52,6 +54,38 @@ export default function GoodMapsPage() {
                 height={25}
               />
             </a>
+          </div>
+        }
+        tldr={
+          <div className="case-tldr">
+            <h2 className="case-tldr-heading">TL;DR</h2>
+            <ul className="case-tldr-list">
+              <li>
+                <strong>Problem:</strong> GoodMaps&apos; original app was built
+                for blind users only. The business needed indoor navigation that
+                works for a wide range of users, including blind and low vision,
+                mobility-limited, and neurodivergent people.
+              </li>
+              <li>
+                <strong>What I did:</strong> As UX Designer, I led the
+                end-to-end design from discovery to launch of GoodMaps&apos; B2C
+                iOS and Android app, defining user flows, information
+                architecture, and interaction patterns. I led the building
+                information, in-building search features, and first-time user
+                tutorial experience, and worked with engineers and accessibility
+                experts to validate designs and screen reader usability.
+              </li>
+              <li>
+                <strong>Outcome:</strong> After launch, we surpassed the
+                quarterly MAU target by 250%. The app was also used at the Paris
+                2024 Olympics U.S. Training Center.
+              </li>
+            </ul>
+            <div className="case-tldr-actions">
+              <a className="case-tldr-jump" href="#final-shipped-designs">
+                Jump to shipped designs ↓
+              </a>
+            </div>
           </div>
         }
         metaLeft={[
@@ -111,7 +145,8 @@ export default function GoodMapsPage() {
           </p>
           <p>
             As a UX designer, I helped lead the end-to-end design process of the
-            new GoodMaps: Indoor Navigation app from ideation to launch.
+            new GoodMaps: Indoor Navigation app from ideation to launch of the
+            iOS and Android apps.
           </p>
         </CaseTextBlock>
 
@@ -337,7 +372,7 @@ export default function GoodMapsPage() {
         <hr className="case-divider" />
 
         <CaseTextBlock>
-          <h2>Final shipped designs</h2>
+          <h2 id="final-shipped-designs">Final shipped designs</h2>
         </CaseTextBlock>
 
         <div className="gm-screens">

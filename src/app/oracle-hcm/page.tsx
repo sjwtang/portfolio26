@@ -19,6 +19,36 @@ export default function OraclePage() {
         imageHeight={487}
         framed
         divider={false}
+        framePadding="0"
+        frameClassName="case-hero-media--plain"
+        tldr={
+          <div className="case-tldr">
+            <h2 className="case-tldr-heading">TL;DR</h2>
+            <ul className="case-tldr-list">
+              <li>
+                <strong>Problem:</strong> Nurses sign up for shifts 8-10 weeks
+                ahead while balancing hospital needs, seniority, and compliance
+                rules, and current tools make the process error-prone and
+                mentally exhausting.
+              </li>
+              <li>
+                <strong>What I did:</strong> As a UX Design Intern on
+                Oracle&apos;s Workforce Management team, I designed a
+                mobile-first, AI-assisted self-scheduling flow. AI recommends a
+                schedule that accounts for hospital rules and state laws, and
+                nurses can adjust it manually or by prompting in natural
+                language. I proposed design directions to key stakeholders and
+                built high-fidelity prototypes using Oracle&apos;s Redwood design
+                system.
+              </li>
+              <li>
+                <strong>Outcome:</strong> My approach was adopted into the HCM
+                team&apos;s long-term product vision, influencing product
+                direction.
+              </li>
+            </ul>
+          </div>
+        }
         metaLeft={[
           { label: "Role", value: "UX Design Intern" },
           { label: "Team", value: "Workforce Management" },

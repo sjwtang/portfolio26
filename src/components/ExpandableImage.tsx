@@ -41,6 +41,8 @@ type ExpandableImageProps = {
   className?: string;
   style?: CSSProperties;
   caption?: string;
+  quality?: number;
+  unoptimized?: boolean;
 };
 
 export function ExpandableImage({
@@ -53,6 +55,8 @@ export function ExpandableImage({
   className,
   style,
   caption,
+  quality,
+  unoptimized = false,
 }: ExpandableImageProps) {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -112,6 +116,8 @@ export function ExpandableImage({
           width={width}
           height={height}
           priority={priority}
+          quality={quality}
+          unoptimized={unoptimized}
           className={className}
           style={style}
         />

@@ -71,7 +71,35 @@ export default function AcmePage() {
         divider={false}
         titleGap={28}
         framePadding="40px 0"
-        frameClassName="case-hero-frame acme-hero-frame"
+        frameClassName="case-hero-frame acme-hero-frame case-hero-media--plain"
+        tldr={
+          <div className="case-tldr">
+            <h2 className="case-tldr-heading">TL;DR</h2>
+            <ul className="case-tldr-list">
+              <li>
+                <strong>Problem:</strong> Fraud investigators lack visibility
+                into their caseload and the context behind flagged transactions,
+                and the repetitive work is demotivating.
+              </li>
+              <li>
+                <strong>What I did:</strong> Designed a gamified case-management
+                dashboard for a fictional fraud analytics company as a graduate
+                course project, grounded in jobs-to-be-done and object-action
+                modeling.
+              </li>
+              <li>
+                <strong>Result:</strong> A tested prototype refined through
+                stakeholder feedback, with an added assist entry point and a
+                simpler performance chart.
+              </li>
+            </ul>
+            <div className="case-tldr-actions">
+              <a className="case-tldr-jump" href="#final-shipped-designs">
+                Jump to shipped designs ↓
+              </a>
+            </div>
+          </div>
+        }
         metaLeft={[
           { label: "Role", value: "UX Designer" },
           { label: "Project", value: "Graduate Interaction Design Course" },
@@ -357,7 +385,7 @@ export default function AcmePage() {
         <hr className="case-divider" />
 
         <CaseTextBlock>
-          <h2>Final shipped designs</h2>
+          <h2 id="final-shipped-designs">Final shipped designs</h2>
         </CaseTextBlock>
 
         <div className="acme-finals">

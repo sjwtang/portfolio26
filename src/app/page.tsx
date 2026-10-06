@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { AvatarHighFive } from "@/components/AvatarHighFive";
 
 const projects: {
   href: string;
@@ -18,7 +19,7 @@ const projects: {
 }[] = [
   {
     href: "/oracle-hcm",
-    image: "/images/oracle-card.png",
+    image: "/images/oracle-card-device.png",
     imageAlt: "Mobile calendar where nurses select shifts",
     badge: "/images/oracle-badge.png",
     badgeWidth: 63,
@@ -30,7 +31,7 @@ const projects: {
   },
   {
     href: "/goodmaps",
-    image: "/images/goodmaps-card.png",
+    image: "/images/goodmaps-card-device.png",
     imageAlt: "Mobile indoor navigation route",
     badge: "/images/goodmaps-badge.png",
     badgeWidth: 41,
@@ -40,12 +41,13 @@ const projects: {
       "Redesigning indoor navigation to help people with diverse accessibility needs confidently navigate unfamiliar spaces",
     tags: ["Accessibility", "B2C", "Navigation", "Mobile"],
     imageBadge: {
-      label: "+250% MAU after redesign",
+      label: "Surpassed MAU target by 250%",
+      wide: true,
     },
   },
   {
     href: "/acme",
-    image: "/images/acme-card.png",
+    image: "/images/acme-card-device.png",
     imageAlt: "Desktop fraud investigation dashboard with charts and case table",
     badge: "/images/acme-badge.png",
     badgeWidth: 95,
@@ -57,7 +59,7 @@ const projects: {
   },
   {
     href: "/navipath",
-    image: "/images/navipath-card.png",
+    image: "/images/navipath-card-device.png",
     imageAlt: "Laptop showing AI-assisted mitosis search on a tissue scan",
     badge: "/images/navipath-badge.png",
     badgeWidth: 99,
@@ -97,19 +99,7 @@ export default function HomePage() {
           }}
         >
           Most recently, she designed{" "}
-          <span className="intro-highlight">
-            <span className="intro-highlight-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            <span className="intro-highlight-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            <span className="intro-highlight-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            AI-assisted workflows
-          </span>{" "}
-          at{" "}
+          <span className="intro-highlight">AI-assisted workflows</span> at{" "}
           <a
             className="link-blue"
             href="https://www.oracle.com/human-capital-management/"
@@ -120,18 +110,7 @@ export default function HomePage() {
           </a>
           . With an M.S. in Human Factors &amp; Ergonomics (UX Concentration),
           she brings a{" "}
-          <span className="intro-highlight">
-            <span className="intro-highlight-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            <span className="intro-highlight-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            <span className="intro-highlight-sparkle" aria-hidden="true">
-              ✨
-            </span>
-            human factors perspective
-          </span>{" "}
+          <span className="intro-highlight">human factors perspective</span>{" "}
           to
           enterprise, healthcare, and accessibility-focused work.
         </p>
@@ -145,13 +124,7 @@ export default function HomePage() {
           marginBottom: 120,
         }}
       >
-        <Image
-          src="/images/avatar.jpg"
-          alt=""
-          width={175}
-          height={175}
-          priority
-        />
+        <AvatarHighFive />
       </div>
 
       <ul className="project-grid">
