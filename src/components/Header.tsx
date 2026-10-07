@@ -14,46 +14,19 @@ export function Header() {
 
   return (
     <header className="site-header">
-      <div
-        className="page-shell site-shell"
-        style={{ paddingTop: 22, paddingBottom: 22 }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <Link
-            href="/"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 10,
-              fontSize: 32,
-              fontWeight: 500,
-              letterSpacing: "-0.32px",
-              lineHeight: "64px",
-              color: "#111111",
-            }}
-          >
+      <div className="page-shell site-shell">
+        <div className="site-header-bar">
+          <Link href="/" className="site-header-brand">
             <Image
               src="/images/header-icon.png"
               alt=""
               width={32}
               height={32}
-              style={{
-                width: "1em",
-                height: "1em",
-                objectFit: "contain",
-                flexShrink: 0,
-              }}
               aria-hidden
             />
             Shirley Tang
           </Link>
-          <nav style={{ display: "flex", gap: 51, alignItems: "center" }}>
+          <nav className="site-header-nav">
             {links.map((link) => {
               const active =
                 link.href === "/"

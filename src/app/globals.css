@@ -184,9 +184,139 @@ img {
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.site-header .site-shell {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.site-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.site-header-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+  line-height: 64px;
+  color: #111111;
+  min-width: 0;
+}
+
+.site-header-brand img {
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.site-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 51px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+  .site-header-bar {
+    gap: 24px;
+  }
+
+  .site-header-brand {
+    font-size: 22px;
+    letter-spacing: -0.22px;
+    line-height: 1.2;
+  }
+
+  .site-header-nav {
+    gap: 28px;
+  }
+}
+
 .site-footer {
   width: 100%;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.site-footer-inner {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.site-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.site-footer-avatar {
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+.site-footer-cols {
+  display: flex;
+  align-items: flex-start;
+  gap: 96px;
+  margin-left: auto;
+}
+
+.site-footer-col {
+  min-width: 0;
+}
+
+.site-footer-heading {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.15px;
+  line-height: 15px;
+  margin: 0 0 10px;
+}
+
+.site-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer-list li {
+  margin-bottom: 10px;
+}
+
+.site-footer-col:last-child .site-footer-list li {
+  margin-bottom: 8px;
+}
+
+.site-footer-link {
+  font-size: 15px;
+  letter-spacing: -0.15px;
+  line-height: 15px;
+}
+
+.site-footer-link--external {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .site-footer-row {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .site-footer-cols {
+    gap: 40px;
+    margin-left: 0;
+  }
 }
 
 .page-shell.site-shell {

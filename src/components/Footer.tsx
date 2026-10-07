@@ -45,98 +45,48 @@ function ExtIcon() {
 export function Footer() {
   return (
     <footer className="site-footer">
-      <div
-        className="page-shell site-shell"
-        style={{ paddingTop: 80, paddingBottom: 80 }}
-      >
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-start",
-          gap: 40,
-          flexWrap: "wrap",
-        }}
-      >
-        <Image
-          src="/images/avatar.jpg"
-          alt=""
-          width={69}
-          height={69}
-          style={{ borderRadius: 0 }}
-        />
-        <div
-          style={{
-            display: "flex",
-            gap: 96,
-            marginLeft: "auto",
-          }}
-        >
-          <div>
-            <p
-              style={{
-                fontSize: 15,
-                fontWeight: 600,
-                letterSpacing: "-0.15px",
-                lineHeight: "15px",
-                margin: "0 0 10px",
-              }}
-            >
-              Connect
-            </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {connect.map((item) => (
-                <li key={item.label} style={{ marginBottom: 10 }}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      fontSize: 15,
-                      letterSpacing: "-0.15px",
-                      lineHeight: "15px",
-                    }}
-                  >
-                    {item.label}
-                    <ExtIcon />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <p
-              style={{
-                fontSize: 15,
-                fontWeight: 600,
-                letterSpacing: "-0.15px",
-                lineHeight: "15px",
-                margin: "0 0 10px",
-              }}
-            >
-              Projects
-            </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {projects.map((item) => (
-                <li key={item.label} style={{ marginBottom: 8 }}>
-                  <Link
-                    href={item.href}
-                    style={{
-                      fontSize: 15,
-                      letterSpacing: "-0.15px",
-                      lineHeight: "15px",
-                    }}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+      <div className="page-shell site-shell site-footer-inner">
+        <div className="site-footer-row">
+          <Image
+            src="/images/avatar.jpg"
+            alt=""
+            width={69}
+            height={69}
+            className="site-footer-avatar"
+          />
+          <div className="site-footer-cols">
+            <div className="site-footer-col">
+              <p className="site-footer-heading">Connect</p>
+              <ul className="site-footer-list">
+                {connect.map((item) => (
+                  <li key={item.label}>
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="site-footer-link site-footer-link--external"
+                    >
+                      {item.label}
+                      <ExtIcon />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="site-footer-col">
+              <p className="site-footer-heading">Projects</p>
+              <ul className="site-footer-list">
+                {projects.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="site-footer-link">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </footer>
   );
