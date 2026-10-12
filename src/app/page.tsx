@@ -6,6 +6,7 @@ const projects: {
   href: string;
   image: string;
   imageAlt: string;
+  background?: string;
   badge: string;
   badgeWidth: number;
   badgeHeight: number;
@@ -20,6 +21,7 @@ const projects: {
   {
     href: "/oracle-hcm",
     image: "/images/oracle-card-device.png",
+    background: "/images/oracle-card-bg.jpg",
     imageAlt: "Mobile calendar where nurses select shifts",
     badge: "/images/oracle-badge.png",
     badgeWidth: 63,
@@ -32,6 +34,7 @@ const projects: {
   {
     href: "/goodmaps",
     image: "/images/goodmaps-card-device.png",
+    background: "/images/goodmaps-card-bg.jpg",
     imageAlt: "Mobile indoor navigation route",
     badge: "/images/goodmaps-badge.png",
     badgeWidth: 41,
@@ -48,6 +51,7 @@ const projects: {
   {
     href: "/acme",
     image: "/images/acme-card-device.png",
+    background: "/images/acme-card-bg.jpg",
     imageAlt: "Desktop fraud investigation dashboard with charts and case table",
     badge: "/images/acme-badge.png",
     badgeWidth: 95,
@@ -60,6 +64,7 @@ const projects: {
   {
     href: "/navipath",
     image: "/images/navipath-card-device.png",
+    background: "/images/navipath-card-bg.jpg",
     imageAlt: "Laptop showing AI-assisted mitosis search on a tissue scan",
     badge: "/images/navipath-badge.png",
     badgeWidth: 99,
@@ -130,13 +135,36 @@ export default function HomePage() {
       <ul className="project-grid">
         {projects.map((project) => (
           <li key={project.href} className="project-item">
-            <div className="project-item-media">
+            <div
+              className={
+                project.background
+                  ? "project-item-media project-item-media--layered"
+                  : "project-item-media"
+              }
+            >
+              {project.background ? (
+                <>
+                  <Image
+                    src={project.background}
+                    alt=""
+                    width={1485}
+                    height={1329}
+                    className="project-item-bg"
+                    unoptimized
+                  />
+                  <span className="project-item-grain" aria-hidden="true" />
+                </>
+              ) : null}
               <Image
                 src={project.image}
                 alt={project.imageAlt}
                 width={1485}
                 height={1329}
-                className="project-item-image"
+                className={
+                  project.background
+                    ? "project-item-image project-item-device"
+                    : "project-item-image"
+                }
               />
               {project.imageBadge ? (
                 <span
