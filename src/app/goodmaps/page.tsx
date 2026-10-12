@@ -115,7 +115,10 @@ export default function GoodMapsPage() {
       <div className="case-shell case-body prose-case">
         <hr className="case-divider" />
 
-        <figure className="case-figure" style={{ width: "fit-content", maxWidth: "100%" }}>
+        <figure
+          className="case-figure"
+          style={{ width: "fit-content", maxWidth: "100%", marginLeft: "auto", marginRight: "auto" }}
+        >
           <ExpandableImage
             src="/images/gm-research.gif"
             alt="Research session collage"
