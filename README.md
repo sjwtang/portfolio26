@@ -1,24 +1,37 @@
-# portfolio26
+# Shirley Tang — UX / product design portfolio
 
-A Next.js recreation of [shirleytang.framer.website](https://shirleytang.framer.website/), ready to host on Vercel.
+**UX designer who makes complex, AI-enabled products clear and usable.**
 
-## Develop
+🔗 **Live portfolio:** https://shirleytang.vercel.app/
 
-```bash
-npm install
-npm run dev
-```
+This portfolio showcases my work across product design, AI-powered interfaces, enterprise software, healthcare, and accessibility. With an M.S. in Human Factors and Ergonomics, I bring a human-centered approach to designing complex systems and making technology more intuitive and accessible.
 
-Open [http://localhost:3000](http://localhost:3000).
+## Featured work
 
-## Deploy on Vercel
+- **Oracle HCM — AI-assisted nurse self-scheduling:** Exploring mobile-first scheduling experiences that help healthcare workers navigate complex scheduling rules and workflows.
+- **GoodMaps — Accessible indoor navigation:** Designing accessible navigation experiences that support people with visual impairments in navigating complex indoor environments.
+- **NaviPath — AI-assisted mitosis search:** Exploring AI-assisted search workflows to help pathologists find relevant information more efficiently.
+- **ACME — Product design case study:** Exploring product design decisions, interaction patterns, and user needs through a detailed case study.
 
-1. Push this repo to GitHub
-2. Import the project in [Vercel](https://vercel.com/new)
-3. Deploy with default Next.js settings
+Visit the [live portfolio](https://shirleytang.vercel.app/) to explore the full case studies.
 
-Or from the CLI:
+## Design focus
 
-```bash
-npx vercel
-```
+- Product and interaction design
+- AI-powered and multimodal interfaces
+- Enterprise workflows and complex systems
+- Accessibility and inclusive design
+- Human factors, UX research, and usability
+
+## About me
+
+I'm a UX designer interested in making complex technology easier to understand, navigate, and use. My background in cognitive science, statistics, and human factors informs how I approach user research, interaction design, and product decisions.
+
+## Contact
+
+- **Portfolio:** https://shirleytang.vercel.app/
+- **LinkedIn:** https://www.linkedin.com/in/shirleyjtang/
+
+---
+
+This repository contains the source code for my personal portfolio website.
