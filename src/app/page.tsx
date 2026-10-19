@@ -92,7 +92,7 @@ export default function HomePage() {
             color: "#333333",
           }}
         >
-          Shirley is a UX designer who makes complex, AI-enabled products clear
+          Shirley is a UX designer who makes complex products clear
           and usable.
         </p>
         <p
