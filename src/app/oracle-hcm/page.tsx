@@ -41,7 +41,7 @@ export default function OraclePage() {
                 built high-fidelity prototypes using Oracle&apos;s Redwood design
                 system.
               </li>
-              <li>
+              <li className="case-tldr-outcome">
                 <strong>Outcome:</strong> My approach was adopted into the HCM
                 team&apos;s product vision, influencing product
                 direction.
@@ -205,7 +205,6 @@ export default function OraclePage() {
           height={613}
           caption="User flows and concept sketches"
           framed
-          framePadding="40px clamp(16px, 3vw, 47px)"
         />
 
         <CaseTextBlock>
@@ -228,7 +227,6 @@ export default function OraclePage() {
           height={274}
           caption="View AI-recommended schedule"
           framed
-          framePadding="40px clamp(16px, 3vw, 47px)"
         />
 
         <CaseTextBlock>
@@ -253,7 +251,6 @@ export default function OraclePage() {
           height={286}
           caption="Edit and generate alternate schedules by prompting"
           framed
-          framePadding="40px clamp(16px, 3vw, 47px)"
         />
 
         <hr className="case-divider" />

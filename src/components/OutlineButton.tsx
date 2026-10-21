@@ -17,19 +17,21 @@ export function ExtArrowIcon({ size = 24 }: { size?: number }) {
   );
 }
 
-/** Framer outline chip button (See publication, LinkedIn, Email, Resume) */
+/** Chip button (See publication, LinkedIn, Email, Resume) */
 export function OutlineButton({
   href,
   children,
   external = true,
+  variant = "secondary",
 }: {
   href: string;
   children: ReactNode;
   external?: boolean;
+  variant?: "primary" | "secondary" | "tertiary";
 }) {
   return (
     <a
-      className="btn-outline"
+      className={`btn btn-${variant}`}
       href={href}
       {...(external
         ? { target: "_blank", rel: "noopener noreferrer" }

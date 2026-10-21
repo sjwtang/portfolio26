@@ -45,11 +45,12 @@ export function AvatarHighFive() {
         aria-label="Say hi to Shirley"
       >
         <Image
-          src="/images/avatar.jpg"
+          src="/images/avatar.png"
           alt=""
           width={175}
           height={175}
           priority
+          unoptimized
           className="avatar-highfive-image"
         />
         <span className="avatar-highfive-fx" aria-hidden="true">

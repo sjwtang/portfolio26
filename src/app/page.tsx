@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { AvatarHighFive } from "@/components/AvatarHighFive";
+import { DogDoodle } from "@/components/DogDoodle";
 
 const projects: {
   href: string;
@@ -89,18 +89,18 @@ export default function HomePage() {
             fontSize: 24,
             lineHeight: "28.8px",
             margin: "0 0 18px",
-            color: "#333333",
+            color: "#302A27",
           }}
         >
-          Shirley is a UX designer who makes complex products clear
-          and usable.
+          Shirley makes complex products clear, usable, and a little more
+          delightful.
         </p>
         <p
           style={{
             fontSize: 24,
             lineHeight: "28.8px",
             margin: 0,
-            color: "#333333",
+            color: "#302A27",
           }}
         >
           Most recently, she designed{" "}
@@ -121,27 +121,24 @@ export default function HomePage() {
         </p>
       </section>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginTop: 72,
-          marginBottom: 120,
-        }}
-      >
-        <AvatarHighFive />
-      </div>
-
       <ul className="project-grid">
         {projects.map((project) => (
           <li key={project.href} className="project-item">
             <div
               className={
-                project.background
-                  ? "project-item-media project-item-media--layered"
-                  : "project-item-media"
+                project.href === "/goodmaps"
+                  ? "project-item-visual project-item-visual--dog"
+                  : "project-item-visual"
               }
             >
+              {project.href === "/goodmaps" ? <DogDoodle /> : null}
+              <div
+                className={
+                  project.background
+                    ? "project-item-media project-item-media--layered"
+                    : "project-item-media"
+                }
+              >
               {project.background ? (
                 <>
                   <Image
@@ -177,6 +174,7 @@ export default function HomePage() {
                   {project.imageBadge.label}
                 </span>
               ) : null}
+            </div>
             </div>
             <div className="project-copy">
               <div className="project-logo">

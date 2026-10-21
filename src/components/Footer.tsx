@@ -1,23 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-
-const connect = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/shirleyjtang",
-    external: true,
-  },
-  {
-    label: "Resume",
-    href: "/ShirleyTang_Resume.pdf",
-    external: true,
-  },
-  {
-    label: "Email",
-    href: "mailto:sjwtang@gmail.com?subject=Shirley%20Tang%20portfolio%20inquiry",
-    external: true,
-  },
-];
 
 const projects = [
   { label: "Oracle", href: "/oracle-hcm" },
@@ -26,18 +7,15 @@ const projects = [
   { label: "NaviPath", href: "/navipath" },
 ];
 
-function ExtIcon() {
+function LinkedInIcon() {
   return (
     <svg
-      className="ext-icon"
-      viewBox="0 0 24 25"
-      fill="none"
+      className="site-footer-linkedin-icon"
+      viewBox="0 0 24 24"
+      fill="currentColor"
       aria-hidden="true"
     >
-      <path
-        d="M17.9999 7.55C17.9999 7.28478 17.8946 7.03043 17.707 6.84289C17.5195 6.65536 17.2652 6.55 16.9999 6.55L8.99994 6.5C8.73472 6.5 8.48037 6.60536 8.29283 6.79289C8.1053 6.98043 7.99994 7.23478 7.99994 7.5C7.99994 7.76522 8.1053 8.01957 8.29283 8.20711C8.48037 8.39464 8.73472 8.5 8.99994 8.5H14.5599L6.28994 16.79C6.19621 16.883 6.12182 16.9936 6.07105 17.1154C6.02028 17.2373 5.99414 17.368 5.99414 17.5C5.99414 17.632 6.02028 17.7627 6.07105 17.8846C6.12182 18.0064 6.19621 18.117 6.28994 18.21C6.3839 18.3037 6.49454 18.3781 6.6164 18.4289C6.73826 18.4796 6.86894 18.5058 7.00094 18.5058C7.13294 18.5058 7.26362 18.4796 7.38548 18.4289C7.50734 18.3781 7.61798 18.3037 7.71194 18.21L15.9999 9.92V15.5C15.9999 15.7652 16.1053 16.0196 16.2928 16.2071C16.4804 16.3946 16.7347 16.5 16.9999 16.5C17.2652 16.5 17.5195 16.3946 17.707 16.2071C17.8946 16.0196 17.9999 15.7652 17.9999 15.5V7.55Z"
-        fill="currentColor"
-      />
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
     </svg>
   );
 }
@@ -47,32 +25,24 @@ export function Footer() {
     <footer className="site-footer">
       <div className="page-shell site-shell site-footer-inner">
         <div className="site-footer-row">
-          <Image
-            src="/images/avatar.jpg"
-            alt=""
-            width={69}
-            height={69}
-            className="site-footer-avatar"
-          />
-          <div className="site-footer-cols">
-            <div className="site-footer-col">
-              <p className="site-footer-heading">Connect</p>
-              <ul className="site-footer-list">
-                {connect.map((item) => (
-                  <li key={item.label}>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="site-footer-link site-footer-link--external"
-                    >
-                      {item.label}
-                      <ExtIcon />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+          <div className="site-footer-copy">
+            <div className="site-footer-copy-top">
+              <p className="site-footer-thanks">Thank you for stopping by!</p>
+              <a
+                href="https://www.linkedin.com/in/shirleyjtang"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="site-footer-linkedin"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon />
+              </a>
             </div>
+            <p className="site-footer-credit">
+              ☕ Fueled by coffee, crafted by Shirley
+            </p>
+          </div>
+          <div className="site-footer-cols">
             <div className="site-footer-col">
               <p className="site-footer-heading">Projects</p>
               <ul className="site-footer-list">

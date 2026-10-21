@@ -100,7 +100,7 @@ export function CaseHero({
           fontWeight: 700,
           lineHeight: "48px",
           margin: 0,
-          color: "#333333",
+          color: "#302A27",
         }}
       >
         {title}
@@ -111,7 +111,7 @@ export function CaseHero({
           fontWeight: 400,
           lineHeight: "28.8px",
           margin: 0,
-          color: "#333333",
+          color: "#302A27",
         }}
       >
         {subtitle}

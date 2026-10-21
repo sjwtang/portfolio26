@@ -24,7 +24,7 @@ export function BackToTop() {
   return (
     <button
       type="button"
-      className="btn-outline btn-back-to-top"
+      className="btn btn-tertiary btn-back-to-top"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       Back to top

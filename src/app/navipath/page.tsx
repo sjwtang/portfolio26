@@ -41,7 +41,7 @@ export default function NaviPathPage() {
                 interviews, prototyped from low to high fidelity with engineers,
                 and planned and moderated usability tests.
               </li>
-              <li>
+              <li className="case-tldr-outcome">
                 <strong>Outcome:</strong> In a study with 15 pathologists,
                 NaviPath significantly improved navigation efficiency,
                 precision, and recall (p&lt;0.05) over the comparison conditions.
@@ -161,7 +161,6 @@ export default function NaviPathPage() {
           height={564}
           caption="Pathology resident persona"
           framed
-          framePadding="40px 100px"
           objectFit="cover"
         />
 
@@ -181,7 +180,7 @@ export default function NaviPathPage() {
           </p>
         </CaseTextBlock>
 
-        <CaseCallout caption="Problem statement" framePadding="40px 50px">
+        <CaseCallout caption="Problem statement">
           <p className="lead">
             How might we implement a navigation system that can provide AI
             recommendations to pathologists identifying mitosis, without
@@ -209,7 +208,6 @@ export default function NaviPathPage() {
         <CaseImage
           caption="User tasks and flows demonstrate interactions with the magnification levels"
           framed
-          framePadding="29px 48px"
           frameStyle={{
             flexDirection: "column",
             gap: 20,
@@ -282,7 +280,6 @@ export default function NaviPathPage() {
           height={1307}
           caption="Low-fidelity wireframes of the system interface and recommendation slider"
           framed
-          framePadding="40px 47px"
         />
 
         <CaseTextBlock>
@@ -302,7 +299,6 @@ export default function NaviPathPage() {
           height={1155}
           caption="Design iterations of the system interface"
           framed
-          framePadding="40px 47px"
         />
 
         <hr className="case-divider" />
@@ -338,7 +334,6 @@ export default function NaviPathPage() {
           height={357}
           caption="Moderating usability testing sessions at the lab"
           framed
-          framePadding="40px 48px"
         />
 
         <hr className="case-divider" />
@@ -381,7 +376,6 @@ export default function NaviPathPage() {
           height={422}
           caption="NaviPath MVP displaying hotspots of mitosis areas"
           framed
-          framePadding="40px 48px"
         />
 
         <CaseTextBlock>

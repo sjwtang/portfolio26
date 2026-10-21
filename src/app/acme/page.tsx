@@ -87,7 +87,7 @@ export default function AcmePage() {
                 course project, grounded in jobs-to-be-done and object-action
                 modeling.
               </li>
-              <li>
+              <li className="case-tldr-outcome">
                 <strong>Result:</strong> A tested prototype refined through
                 stakeholder feedback, with an added assist entry point and a
                 simpler performance chart.
@@ -169,7 +169,6 @@ export default function AcmePage() {
 
         <CaseImage
           framed
-          framePadding="46px 37px"
           caption="Investigator goals and pain points"
         >
           <div className="acme-persona">
@@ -248,7 +247,6 @@ export default function AcmePage() {
           width={2720}
           height={1838}
           framed
-          framePadding="46px 37px"
           caption="JTBD includes: resolve a case, flag a case, escalate a case, flag model, complete game, complete training, and request assist on case"
         />
 
@@ -276,7 +274,6 @@ export default function AcmePage() {
         <CaseImage
           framed
           frameClassName="acme-frame-matrix"
-          framePadding="54px 48px"
           caption="Objects-action table and prioritization matrix"
         >
           <ExpandableImage
@@ -284,14 +281,14 @@ export default function AcmePage() {
             alt="Object-action table for investigator tasks"
             width={1034}
             height={548}
-            style={{ width: 296, maxWidth: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto" }}
           />
           <ExpandableImage
             src="/images/acme-priority.png"
             alt="Prioritization matrix for object-action pairings"
             width={992}
             height={412}
-            style={{ width: 288, maxWidth: "100%", height: "auto" }}
+            style={{ width: "100%", height: "auto" }}
           />
         </CaseImage>
 
@@ -347,7 +344,6 @@ export default function AcmePage() {
           width={2975}
           height={1649}
           framed
-          framePadding="28px 39px"
           caption="Wireframes created to validate visualizations and design direction"
         />
 
@@ -378,7 +374,6 @@ export default function AcmePage() {
           width={1491}
           height={1649}
           framed
-          framePadding="28px 77.5px"
           caption="Pain points uncovered during stakeholder meeting"
         />
 

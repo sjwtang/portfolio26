@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { OutlineButton } from "@/components/OutlineButton";
 
 const experience = [
   { role: "UX Designer", rest: "@ Oracle (2026 - Present)" },
@@ -59,11 +58,12 @@ export default function AboutPage() {
       <section className="about-hero">
         <div className="about-hero-copy">
           <Image
-            src="/images/about-hello.jpg"
-            alt="Hey, it's great to meet you virtually"
-            width={1631}
-            height={497}
+            src="/images/about-hello.png"
+            alt="Hey :) it's great to meet you virtually"
+            width={1024}
+            height={301}
             priority
+            unoptimized
             style={{ width: "100%", height: "auto" }}
           />
         </div>
@@ -71,29 +71,14 @@ export default function AboutPage() {
           <Image
             src="/images/about-portrait.png"
             alt="it's me, Shirley"
-            width={632}
-            height={574}
+            width={819}
+            height={761}
             priority
             unoptimized
             style={{ width: "min(100%, 500px)", height: "auto" }}
           />
         </div>
       </section>
-
-      <div className="about-hero-actions">
-        <OutlineButton href="https://www.linkedin.com/in/shirleyjtang">
-          LinkedIn
-        </OutlineButton>
-        <OutlineButton href="/ShirleyTang_Resume.pdf">
-          Resume
-        </OutlineButton>
-        <OutlineButton
-          href="mailto:sjwtang@gmail.com?subject=Shirley%20Tang%20portfolio%20inquiry"
-          external={false}
-        >
-          Email
-        </OutlineButton>
-      </div>
 
       <hr className="case-divider about-divider" />
 
@@ -129,10 +114,11 @@ export default function AboutPage() {
 
         <figure className="about-doodle">
           <Image
-            src="/images/about-doodle.jpg"
-            alt=""
-            width={1584}
-            height={426}
+            src="/images/about-doodle.png"
+            alt="I'm inspired! This means a lot.. I feel empowered!"
+            width={1024}
+            height={221}
+            unoptimized
             style={{ width: "100%", maxWidth: 777, height: "auto" }}
           />
         </figure>
@@ -163,19 +149,21 @@ export default function AboutPage() {
           <div className="about-hobbies-tile">
             <div className="about-hobby about-hobby--flower">
               <Image
-                src="/images/hobbies/flower.jpg"
+                src="/images/hobbies/flower.png"
                 alt=""
                 fill
                 sizes="(max-width: 900px) 30vw, 195px"
+                unoptimized
                 style={{ objectFit: "cover" }}
               />
             </div>
             <div className="about-hobby about-hobby--beach">
               <Image
-                src="/images/hobbies/beach.jpg"
+                src="/images/hobbies/beach.png"
                 alt=""
                 fill
                 sizes="(max-width: 900px) 30vw, 195px"
+                unoptimized
                 style={{ objectFit: "cover" }}
               />
             </div>
