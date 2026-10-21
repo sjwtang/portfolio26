@@ -928,6 +928,10 @@ img {
   pointer-events: none;
 }
 
+.home-dog-hit-path {
+  pointer-events: stroke;
+}
+
 .home-dog-hotspot {
   position: absolute;
   right: 0;
@@ -1021,12 +1025,12 @@ img {
   object-fit: contain;
 }
 
-.project-item:hover .project-item-image,
+.project-item:hover:not(:has(.home-dog-hotspot:hover, .home-dog-hit-path:hover)) .project-item-image,
 .project-item:has(.project-item-link:focus-visible) .project-item-image {
   transform: scale(1.04);
 }
 
-.project-item:hover .project-item-link,
+.project-item:hover:not(:has(.home-dog-hotspot:hover, .home-dog-hit-path:hover)) .project-item-link,
 .project-item:has(.project-item-link:focus-visible) .project-item-link {
   text-decoration: underline;
 }
@@ -1062,7 +1066,7 @@ img {
     transition: none;
   }
 
-  .project-item:hover .project-item-image,
+  .project-item:hover:not(:has(.home-dog-hotspot:hover, .home-dog-hit-path:hover)) .project-item-image,
   .project-item:has(.project-item-link:focus-visible) .project-item-image {
     transform: none;
   }
@@ -1245,7 +1249,7 @@ img {
 
 .case-tldr {
   background: #f7f3eb;
-  border: 1px solid #e2c6b6;
+  border: 2px solid #c9a08c;
   border-radius: 8px;
   padding: 16px 20px;
   display: flex;
@@ -1267,10 +1271,10 @@ img {
 .case-tldr-heading::before {
   content: "";
   display: block;
-  width: 14px;
-  height: 14px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E8B923'%3E%3Cpath d='M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4L12 0z'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B85C42'%3E%3Cpath d='M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4L12 0z'/%3E%3C/svg%3E")
     center / contain no-repeat;
 }
 
@@ -1296,18 +1300,6 @@ img {
   font-weight: 700;
 }
 
-.case-tldr-list li.case-tldr-outcome {
-  list-style: none;
-  background: #eadfd3;
-  border-radius: 8px;
-  padding: 8px 12px;
-  margin-left: -1.25rem;
-}
-
-.case-tldr-list li.case-tldr-outcome::marker {
-  content: none;
-}
-
 .case-tldr-actions {
   margin-top: 4px;
 }
@@ -1317,11 +1309,12 @@ img {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
-  color: #302a27;
+  color: var(--color-link);
   background: transparent;
   border: none;
   padding: 0;
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
   box-shadow: none;
   border-radius: 0;
 }

@@ -77,20 +77,20 @@ export default function AcmePage() {
             <h2 className="case-tldr-heading">TL;DR</h2>
             <ul className="case-tldr-list">
               <li>
-                <strong>Problem:</strong> Fraud investigators lack visibility
-                into their caseload and the context behind flagged transactions,
-                and the repetitive work is demotivating.
+                <strong>Problem:</strong> Fraud investigators lack a clear view
+                of their caseload and the context behind flagged transactions.
+                Repetitive workflows also make the work demotivating.
               </li>
               <li>
                 <strong>What I did:</strong> Designed a gamified case-management
-                dashboard for a fictional fraud analytics company as a graduate
-                course project, grounded in jobs-to-be-done and object-action
-                modeling.
+                dashboard for a fictional fraud analytics company, using Jobs to
+                Be Done and object-action models to structure investigator
+                workflows.
               </li>
-              <li className="case-tldr-outcome">
-                <strong>Result:</strong> A tested prototype refined through
-                stakeholder feedback, with an added assist entry point and a
-                simpler performance chart.
+              <li>
+                <strong>Outcome:</strong> Refined the prototype through
+                stakeholder feedback, adding a dashboard entry point for
+                assistance and simplifying the performance visualizations.
               </li>
             </ul>
             <div className="case-tldr-actions">

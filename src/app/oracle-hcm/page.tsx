@@ -26,25 +26,22 @@ export default function OraclePage() {
             <h2 className="case-tldr-heading">TL;DR</h2>
             <ul className="case-tldr-list">
               <li>
-                <strong>Problem:</strong> Nurses sign up for shifts 8-10 weeks
-                ahead while balancing hospital needs, seniority, and compliance
-                rules, and current tools make the process error-prone and
+                <strong>Problem:</strong> Nurses plan their shifts weeks in
+                advance while balancing hospital needs, seniority, and
+                compliance rules. Existing tools make scheduling error-prone and
                 mentally exhausting.
               </li>
               <li>
-                <strong>What I did:</strong> As a UX Design Intern on
-                Oracle&apos;s Workforce Management team, I designed a
-                mobile-first, AI-assisted self-scheduling flow. AI recommends a
-                schedule that accounts for hospital rules and state laws, and
-                nurses can adjust it manually or by prompting in natural
-                language. I proposed design directions to key stakeholders and
-                built high-fidelity prototypes using Oracle&apos;s Redwood design
-                system.
+                <strong>What I did:</strong> Designed a mobile-first, AI-assisted
+                self-scheduling experience that recommends compliant schedules
+                and lets nurses refine them manually or using prompts. Presented
+                design concepts to stakeholders and built high-fidelity
+                prototypes.
               </li>
-              <li className="case-tldr-outcome">
-                <strong>Outcome:</strong> My approach was adopted into the HCM
-                team&apos;s product vision, influencing product
-                direction.
+              <li>
+                <strong>Outcome:</strong> My proposed approach was incorporated
+                into the HCM team&apos;s aspirational designs, influencing
+                product vision and direction.
               </li>
             </ul>
           </div>

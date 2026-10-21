@@ -66,6 +66,15 @@ export function DogDoodle() {
           </linearGradient>
         </defs>
         <path
+          className="home-dog-hit-path"
+          d={DOG_LINE_PATH}
+          fill="none"
+          stroke="transparent"
+          strokeWidth={28}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
           ref={trailRef}
           className="home-dog-spark-stroke"
           d={DOG_LINE_PATH}

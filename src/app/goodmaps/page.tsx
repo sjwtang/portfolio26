@@ -61,23 +61,21 @@ export default function GoodMapsPage() {
             <h2 className="case-tldr-heading">TL;DR</h2>
             <ul className="case-tldr-list">
               <li>
-                <strong>Problem:</strong> GoodMaps&apos; original app was built
-                for blind users only. The business needed indoor navigation that
-                works for a wide range of users, including blind and low vision,
-                mobility-limited, and neurodivergent people.
+                <strong>Problem:</strong> GoodMaps needed to expand beyond an
+                app designed primarily for blind users to support a broader
+                range of visitors, including people with low vision, mobility
+                limitations, and neurodivergent needs.
               </li>
               <li>
-                <strong>What I did:</strong> As UX Designer, I led the
-                end-to-end design from discovery to launch of GoodMaps&apos; B2C
-                iOS and Android app, defining user flows, information
-                architecture, and interaction patterns. I led the building
-                information, in-building search features, and first-time user
-                tutorial experience, and worked with engineers and accessibility
-                experts to validate designs and screen reader usability.
+                <strong>What I did:</strong> Led end-to-end UX design of
+                GoodMaps&apos; iOS and Android navigation app, from discovery
+                through launch. Defined core navigation, search, building
+                information, and onboarding experiences, collaborating with
+                engineers and accessibility experts to validate usability.
               </li>
-              <li className="case-tldr-outcome">
-                <strong>Outcome:</strong> After launch, we surpassed the
-                quarterly MAU target by 250%. The app was also used at the Paris
+              <li>
+                <strong>Outcome:</strong> Surpassed the quarterly monthly active
+                user (MAU) target by 250%. The app was also used at the Paris
                 2024 Olympics U.S. Training Center.
               </li>
             </ul>
