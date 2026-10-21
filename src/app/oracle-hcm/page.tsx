@@ -189,21 +189,26 @@ export default function OraclePage() {
 
         <CaseTextBlock>
           <CaseSectionLabel>IDEATION</CaseSectionLabel>
-          <h2>Exploring primary month views and flight-picker inspired concepts</h2>
+          <h2>From first draft explorations to a final direction</h2>
           <p>
-            I established a high level user flow to guide my concept sketches and
-            experimented with different design approaches while evaluating whether
-            the concepts would actually help Amanda meet her user goals.
+            I explored initial concepts, incorporated
+            design review feedback from fellow designers and stakeholders, and
+            refined the experience to better support nurses&apos; scheduling needs.
+            Ultimately, we leaned towards a direction that adopted both a full
+            month and week view, to allow nurses to understand their schedules at
+            a high level and to delve deeper into each week if desired.
           </p>
         </CaseTextBlock>
 
         <CaseImage
-          src="/images/oracle-sketches.png"
-          alt="Low fidelity concept sketches of a user flow within the app and mobile screens"
-          width={1120}
-          height={613}
-          caption="User flows and concept sketches"
+          src="/images/oracle-wireframes.png"
+          alt="Three rows of mobile screens: initial primary month view concepts, concepts after design reviews, and high-fidelity month-to-week shift selection"
+          width={2507}
+          height={4455}
+          caption="Concept iterations: initial ideas to a final design direction"
           framed
+          quality={100}
+          unoptimized
         />
 
         <CaseTextBlock>
