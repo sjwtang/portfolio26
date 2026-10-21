@@ -904,10 +904,11 @@ img {
   position: absolute;
   z-index: 4;
   pointer-events: none;
-  width: 140%;
+  width: min(140%, 560px);
   max-width: none;
   height: auto;
-  left: -78%;
+  left: auto;
+  right: 38%;
   bottom: calc(100% - 10px);
 }
 
@@ -2127,6 +2128,44 @@ img {
   font-size: 18px;
   line-height: 27px;
   color: #302a27;
+}
+
+.prose-case ol.oracle-pain-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  text-align: left;
+}
+
+.prose-case ol.oracle-pain-list li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 12px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.prose-case ol.oracle-pain-list li::before {
+  content: counter(list-item);
+  position: static;
+  left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid #8f422f;
+  border-radius: 50%;
+  color: #8f422f;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 
 .meta-label {

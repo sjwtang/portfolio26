@@ -88,11 +88,13 @@ export default function OraclePage() {
 
         <CaseImage
           src="/images/oracle-timeline.png"
-          alt="Timeline from August to October, where self-scheduling opens August 10, closes August 23, schedule publishes September 1, and schedule period occurs October 4-November 14"
-          width={999}
-          height={209}
+          alt="Nurse looking at a phone beside a timeline from August to October, with the quote “It's August, and I already need to pick my shifts for October.” August is labeled Choose shifts and October is labeled Shifts start."
+          width={1024}
+          height={297}
           caption="Example of self-scheduling timeline"
           framed
+          quality={100}
+          unoptimized
         />
 
         <CaseTextBlock>
@@ -119,7 +121,7 @@ export default function OraclePage() {
             There were 3 main pain points that I used to motivate my design
             solutions. These pain points included:
           </p>
-          <ol>
+          <ol className="oracle-pain-list">
             <li>Current workflows are not efficient and error-prone</li>
             <li>There is a constant concern of accidentally overscheduling</li>
             <li>Strategizing and comparing shifts is mentally exhausting</li>
