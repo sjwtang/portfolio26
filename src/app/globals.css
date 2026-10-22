@@ -371,6 +371,10 @@ img {
   .site-footer-cols {
     justify-self: start;
   }
+
+  .site-footer-cols {
+    order: -1;
+  }
 }
 
 .page-shell.site-shell {
