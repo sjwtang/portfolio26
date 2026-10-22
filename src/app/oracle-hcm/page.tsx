@@ -261,9 +261,9 @@ export default function OraclePage() {
 
         <CaseImage
           src="/images/oracle-ai-edits.png"
-          alt="Four phone screens showing a nurse adding new scheduling requirements, reviewing AI-proposed alternatives, choosing an option, and submitting an updated schedule"
-          width={1996}
-          height={999}
+          alt="Two phone screens showing a nurse specifying desired scheduling requirements and AI proposing optimal scheduling alternatives"
+          width={1947}
+          height={859}
           caption="Edit and generate alternate schedules by prompting"
           framed
           quality={100}
