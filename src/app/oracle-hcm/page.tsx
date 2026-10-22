@@ -215,8 +215,11 @@ export default function OraclePage() {
           <h2>Utilizing AI to recommend schedules and propose alternatives</h2>
           <p>
             Due to complex scheduling requirements and personal needs, I explored
-            how AI could help surface viable scheduling options to reduce the
-            initial manual work of building a schedule from scratch. Instead of
+            how AI could help surface viable scheduling options to{" "}
+            <strong>
+              reduce the initial manual work of building a schedule from scratch
+            </strong>
+            . Instead of
             nurses choosing individual shifts for each scheduling period, the
             system can automatically recommend a schedule of shifts based on the
             nurse&apos;s known preferences, seniority status, department and
@@ -226,11 +229,13 @@ export default function OraclePage() {
 
         <CaseImage
           src="/images/oracle-ai-recommended.png"
-          alt="Two phone screens showing self-scheduling opening and an AI-recommended schedule with time of day, compatible shifts, and day off callouts"
-          width={932}
-          height={274}
+          alt="Two phone screens showing a work calendar to start self-scheduling and an AI-recommended October schedule, with a callout that days with AI-detected compatible shifts have a colorful border"
+          width={1549}
+          height={854}
           caption="View AI-recommended schedule"
           framed
+          quality={100}
+          unoptimized
         />
 
         <CaseTextBlock>
@@ -239,7 +244,13 @@ export default function OraclePage() {
             wasn&apos;t considered in the initial recommended schedule? Aside from
             retaining the ability to make manual edits, I designed a workflow to
             allow nurses to dynamically generate new, optimized schedules via
-            natural language.
+            natural language. Nurses can{" "}
+            <strong>
+              quickly adjust complex schedules without manually searching for
+              compatible shifts, while ensuring their scheduling requirements are
+              met
+            </strong>
+            .
           </p>
           <p>
             For example, if Amanda wanted to update her preferences or could no
@@ -250,11 +261,13 @@ export default function OraclePage() {
 
         <CaseImage
           src="/images/oracle-ai-edits.png"
-          alt="Three phone screens showing a nurse prompting for schedule changes, reviewing alternate AI-generated options, and confirming an updated schedule"
-          width={890}
-          height={286}
+          alt="Four phone screens showing a nurse adding new scheduling requirements, reviewing AI-proposed alternatives, choosing an option, and submitting an updated schedule"
+          width={1996}
+          height={999}
           caption="Edit and generate alternate schedules by prompting"
           framed
+          quality={100}
+          unoptimized
         />
 
         <hr className="case-divider" />
