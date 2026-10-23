@@ -44,6 +44,11 @@ export default function OraclePage() {
                 product vision and direction.
               </li>
             </ul>
+            <div className="case-tldr-actions">
+              <a className="case-tldr-jump" href="#final-designs">
+                Jump to final designs ↓
+              </a>
+            </div>
           </div>
         }
         metaLeft={[
@@ -130,9 +135,9 @@ export default function OraclePage() {
 
         <CaseImage
           src="/images/oracle-research-workflow.png"
-          alt="Nurses using official scheduling software then hopping into third-party apps to better visualize their shifts"
-          width={2180}
-          height={708}
+          alt="Existing calendar tools lack an ability to visualize shift commitments at a glance"
+          width={2231}
+          height={789}
           caption="Nurses unable to effectively plan and visualize their scheduling commitments"
           framed
           unoptimized
@@ -273,6 +278,23 @@ export default function OraclePage() {
         <hr className="case-divider" />
 
         <CaseTextBlock>
+          <h2 id="final-designs">Final designs</h2>
+        </CaseTextBlock>
+
+        <CaseImage
+          src="/images/oracle-final-designs.png"
+          alt="Annotated collage of five iPhone screens showing nurse self-scheduling: a color-coded calendar, recommended shifts for a selected day, AI-generated schedule options from a prompt, and a weekend requirements warning"
+          width={1868}
+          height={3226}
+          caption="Final design direction presented to leadership"
+          framed
+          quality={100}
+          unoptimized
+        />
+
+        <hr className="case-divider" />
+
+        <CaseTextBlock>
           <h2>Impact</h2>
           <p>
             The final prototype consisted of viewing the recommended schedule,
@@ -284,22 +306,7 @@ export default function OraclePage() {
             team&apos;s aspirational designs, influencing the
             vision and product direction.
           </p>
-          <p>To recap, my solution helps Amanda:</p>
-          <ol>
-            <li>Easily identify suitable shifts and visualize schedules,</li>
-            <li>Stay in control without doing the heavy lifting</li>
-            <li>Meet scheduling requirements</li>
-          </ol>
         </CaseTextBlock>
-
-        <CaseImage
-          src="/images/oracle-weekview.png"
-          alt="Self scheduling week view, October 25, week of October 12-18. User has 3 shifts scheduled totalling at 36 hours for the week."
-          width={999}
-          height={690}
-          caption="Scheduling week view and requirements warning"
-          framed
-        />
 
         <hr className="case-divider" />
 

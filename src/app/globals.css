@@ -1330,7 +1330,8 @@ img {
   background: transparent;
 }
 
-#final-shipped-designs {
+#final-shipped-designs,
+#final-designs {
   scroll-margin-top: 24px;
 }
 
