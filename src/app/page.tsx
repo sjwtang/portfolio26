@@ -18,67 +18,67 @@ const projects: {
   };
   tags?: string[];
 }[] = [
-  {
-    href: "/oracle-hcm",
-    image: "/images/oracle-card-device.png",
-    background: "/images/oracle-card-bg.jpg",
-    imageAlt: "Mobile calendar where nurses select shifts",
-    badge: "/images/oracle-badge.png",
-    badgeWidth: 63,
-    badgeHeight: 40,
-    title: "Oracle HCM: Nurse Self-Scheduling",
-    description:
-      "Designing an AI-assisted scheduling experience for nurses navigating complex staffing constraints",
-    tags: ["AI", "Enterprise", "Healthcare", "Mobile"],
-  },
-  {
-    href: "/goodmaps",
-    image: "/images/goodmaps-card-device.png",
-    background: "/images/goodmaps-card-bg.jpg",
-    imageAlt: "Mobile indoor navigation route",
-    badge: "/images/goodmaps-badge.png",
-    badgeWidth: 41,
-    badgeHeight: 40,
-    title: "GoodMaps: Indoor Navigation",
-    description:
-      "Redesigning indoor navigation to help people with diverse accessibility needs confidently navigate unfamiliar spaces",
-    tags: ["Accessibility", "B2C", "Navigation", "Mobile"],
-    imageBadge: {
-      label: "Surpassed MAU target by 250%",
-      wide: true,
+    {
+      href: "/oracle-hcm",
+      image: "/images/oracle-card-device.png",
+      background: "/images/oracle-card-bg.jpg",
+      imageAlt: "Mobile calendar where nurses select shifts",
+      badge: "/images/oracle-badge.png",
+      badgeWidth: 63,
+      badgeHeight: 40,
+      title: "Oracle HCM: Nurse Self-Scheduling",
+      description:
+        "Designing an AI-assisted scheduling experience for nurses navigating complex staffing constraints",
+      tags: ["AI", "Enterprise", "Healthcare", "Mobile"],
     },
-  },
-  {
-    href: "/acme",
-    image: "/images/acme-card-device.png",
-    background: "/images/acme-card-bg.jpg",
-    imageAlt: "Desktop fraud investigation dashboard with charts and case table",
-    badge: "/images/acme-badge.png",
-    badgeWidth: 95,
-    badgeHeight: 40,
-    title: "ACME: Credit Card Fraud Dashboard",
-    description:
-      "Designing a workflow that helps fraud investigators review and resolve suspicious transactions",
-    tags: ["AI", "Enterprise", "Data Visualization", "Web"],
-  },
-  {
-    href: "/navipath",
-    image: "/images/navipath-card-device.png",
-    background: "/images/navipath-card-bg.jpg",
-    imageAlt: "Laptop showing AI-assisted mitosis search on a tissue scan",
-    badge: "/images/navipath-badge.png",
-    badgeWidth: 99,
-    badgeHeight: 40,
-    title: "NaviPath: AI-Assisted Mitosis Search",
-    description:
-      "Exploring how AI can help pathologists search for mitosis while keeping experts in control",
-    tags: ["AI", "Healthcare", "Human-AI Interaction", "Web"],
-    imageBadge: {
-      label: "Honorable Mention @ ACM CHI '23",
-      wide: true,
+    {
+      href: "/goodmaps",
+      image: "/images/goodmaps-card-device.png",
+      background: "/images/goodmaps-card-bg.jpg",
+      imageAlt: "Mobile indoor navigation route",
+      badge: "/images/goodmaps-badge.png",
+      badgeWidth: 41,
+      badgeHeight: 40,
+      title: "GoodMaps: Indoor Navigation",
+      description:
+        "Redesigning indoor navigation to help people with diverse accessibility needs confidently navigate unfamiliar spaces",
+      tags: ["Accessibility", "B2C", "Navigation", "Mobile"],
+      imageBadge: {
+        label: "Surpassed MAU target by 250%",
+        wide: true,
+      },
     },
-  },
-];
+    {
+      href: "/acme",
+      image: "/images/acme-card-device.png",
+      background: "/images/acme-card-bg.jpg",
+      imageAlt: "Desktop fraud investigation dashboard with charts and case table",
+      badge: "/images/acme-badge.png",
+      badgeWidth: 95,
+      badgeHeight: 40,
+      title: "ACME: Credit Card Fraud Dashboard",
+      description:
+        "Designing a workflow that helps fraud investigators review and resolve suspicious transactions",
+      tags: ["AI", "Enterprise", "Data Visualization", "Web"],
+    },
+    {
+      href: "/navipath",
+      image: "/images/navipath-card-device.png",
+      background: "/images/navipath-card-bg.jpg",
+      imageAlt: "Laptop showing AI-assisted mitosis search on a tissue scan",
+      badge: "/images/navipath-badge.png",
+      badgeWidth: 99,
+      badgeHeight: 40,
+      title: "NaviPath: AI-Assisted Mitosis Search",
+      description:
+        "Exploring how AI can help pathologists search for mitosis while keeping experts in control",
+      tags: ["AI", "Healthcare", "Human-AI Interaction", "Web"],
+      imageBadge: {
+        label: "Honorable Mention @ ACM CHI '23",
+        wide: true,
+      },
+    },
+  ];
 
 export default function HomePage() {
   return (
@@ -139,42 +139,42 @@ export default function HomePage() {
                     : "project-item-media"
                 }
               >
-              {project.background ? (
-                <>
-                  <Image
-                    src={project.background}
-                    alt=""
-                    width={1485}
-                    height={1329}
-                    className="project-item-bg"
-                    unoptimized
-                  />
-                  <span className="project-item-grain" aria-hidden="true" />
-                </>
-              ) : null}
-              <Image
-                src={project.image}
-                alt={project.imageAlt}
-                width={1485}
-                height={1329}
-                className={
-                  project.background
-                    ? `project-item-image project-item-device${project.href === "/acme" ? " acme-card-device" : project.href === "/goodmaps" ? " gm-card-device" : ""}`
-                    : "project-item-image"
-                }
-              />
-              {project.imageBadge ? (
-                <span
+                {project.background ? (
+                  <>
+                    <Image
+                      src={project.background}
+                      alt=""
+                      width={1485}
+                      height={1329}
+                      className="project-item-bg"
+                      unoptimized
+                    />
+                    <span className="project-item-grain" aria-hidden="true" />
+                  </>
+                ) : null}
+                <Image
+                  src={project.image}
+                  alt={project.imageAlt}
+                  width={1485}
+                  height={1329}
                   className={
-                    project.imageBadge.wide
-                      ? "project-item-badge project-item-badge--wide"
-                      : "project-item-badge"
+                    project.background
+                      ? `project-item-image project-item-device${project.href === "/acme" ? " acme-card-device" : project.href === "/goodmaps" ? " gm-card-device" : ""}`
+                      : "project-item-image"
                   }
-                >
-                  {project.imageBadge.label}
-                </span>
-              ) : null}
-            </div>
+                />
+                {project.imageBadge ? (
+                  <span
+                    className={
+                      project.imageBadge.wide
+                        ? "project-item-badge project-item-badge--wide"
+                        : "project-item-badge"
+                    }
+                  >
+                    {project.imageBadge.label}
+                  </span>
+                ) : null}
+              </div>
             </div>
             <div className="project-copy">
               <div className="project-logo">
