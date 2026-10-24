@@ -1339,6 +1339,25 @@ img {
   margin-top: 50px;
 }
 
+.case-hero-media--bleed {
+  width: 100%;
+  max-width: none;
+  margin-top: 0;
+}
+
+.case-hero-media--bleed .expandable-image-trigger {
+  width: 100%;
+  max-width: none;
+}
+
+.case-hero-media--bleed .expandable-image-trigger img {
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  object-fit: cover;
+  object-position: center;
+}
+
 .case-hero-media--framed {
   background: #f1eae2;
   border-radius: 8px;
@@ -1369,7 +1388,7 @@ img {
 }
 
 .case-hero--split .case-hero-copy {
-  gap: 12px !important;
+  gap: 28px !important;
 }
 
 .case-hero-stage {
@@ -1432,7 +1451,7 @@ img {
   }
 
   .case-hero--split .case-hero-copy {
-    gap: 8px !important;
+    gap: 28px !important;
   }
 
   .case-hero-stage {
@@ -1795,6 +1814,37 @@ img {
   line-height: 27px;
   margin: 0;
   color: #302a27;
+}
+
+.oracle-final {
+  width: min(662px, calc(100% - 160px));
+}
+
+.oracle-final .expandable-image-trigger {
+  width: 100%;
+  max-width: 100%;
+}
+
+.oracle-meet-requirements-image {
+  width: 364px;
+  max-width: 100%;
+  align-self: center;
+}
+
+.oracle-final:first-child > .expandable-image-trigger,
+.oracle-final:first-child > .acme-final-copy {
+  align-self: center;
+}
+
+.oracle-final:first-child > .acme-final-copy {
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 800px) {
+  .oracle-final {
+    width: 100%;
+  }
 }
 
 .acme-frame-matrix {

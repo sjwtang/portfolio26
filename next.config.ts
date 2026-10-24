@@ -4,6 +4,7 @@ import path from "path";
 const nextConfig: NextConfig = {
   outputFileTracingRoot: path.join(__dirname),
   images: {
+    qualities: [75, 100],
     remotePatterns: [
       {
         protocol: "https",

@@ -15,17 +15,14 @@ export default function GoodMapsPage() {
       <CaseHero
         title="GoodMaps: Indoor Navigation"
         subtitle="Creating an accessible wayfinding app to navigate inside complex buildings"
-        image="/images/gm-hero.png"
+        image="/images/goodmaps-hero.png"
         imageAlt="GoodMaps indoor navigation app screens"
         imageWidth={1600}
         imageHeight={995}
         imageQuality={100}
         imageUnoptimized
-        framed
+        fullBleed
         divider={false}
-        titleGap={28}
-        framePadding="0"
-        frameClassName="case-hero-frame gm-hero-frame case-hero-media--plain"
         heroFooter={
           <div className="gm-tool-logos">
             <a
@@ -74,7 +71,7 @@ export default function GoodMapsPage() {
                 engineers and accessibility experts to validate usability.
               </li>
               <li>
-                <strong>Outcome:</strong> Surpassed the quarterly monthly active
+                <strong>Outcome:</strong> Mobile app shipped to the Apple App Store and Google Play Store. Surpassed the quarterly monthly active
                 user (MAU) target by 250%. The app was also used at the Paris
                 2024 Olympics U.S. Training Center.
               </li>

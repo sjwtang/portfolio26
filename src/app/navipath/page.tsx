@@ -15,15 +15,14 @@ export default function NaviPathPage() {
       <CaseHero
         title="NaviPath: AI-Assisted Mitosis Search"
         subtitle="Integrating artificial intelligence to enhance pathologist workflows in identifying mitoses"
-        image="/images/np-hero.png"
+        image="/images/navipath-hero.png"
         imageAlt="Laptop displaying image of tissue scan"
-        imageWidth={1305}
-        imageHeight={744}
-        framed
+        imageWidth={2303}
+        imageHeight={791}
+        imageQuality={100}
+        imageUnoptimized
+        fullBleed
         divider={false}
-        titleGap={28}
-        framePadding="0"
-        frameClassName="case-hero-frame np-hero-frame case-hero-media--plain"
         tldr={
           <div className="case-tldr">
             <h2 className="case-tldr-heading">TL;DR</h2>

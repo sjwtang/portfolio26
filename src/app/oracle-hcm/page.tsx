@@ -6,6 +6,7 @@ import {
   CaseSectionLabel,
   CaseTextBlock,
 } from "@/components/CaseStudy";
+import { ExpandableImage } from "@/components/ExpandableImage";
 
 export default function OraclePage() {
   return (
@@ -14,13 +15,13 @@ export default function OraclePage() {
         title="Oracle HCM: Nurse Self-Scheduling"
         subtitle="Helping nurses sign up for their desired shifts"
         image="/images/oracle-hero.png"
-        imageAlt="Mobile phone showing nurse self-scheduling calendar"
-        imageWidth={241}
-        imageHeight={487}
-        framed
+        imageAlt="Nurse self-scheduling product collage with a month calendar, an AI prompt for night shifts, and a day-level recommended schedule"
+        imageWidth={2303}
+        imageHeight={791}
+        imageQuality={100}
+        imageUnoptimized
+        fullBleed
         divider={false}
-        framePadding="0"
-        frameClassName="case-hero-media--plain"
         tldr={
           <div className="case-tldr">
             <h2 className="case-tldr-heading">TL;DR</h2>
@@ -281,26 +282,77 @@ export default function OraclePage() {
           <h2 id="final-designs">Final designs</h2>
         </CaseTextBlock>
 
-        <CaseImage
-          src="/images/oracle-final-designs.png"
-          alt="Annotated collage of five iPhone screens showing nurse self-scheduling: a color-coded calendar, recommended shifts for a selected day, AI-generated schedule options from a prompt, and a weekend requirements warning"
-          width={1868}
-          height={3226}
-          caption="Final design direction presented to leadership"
-          framed
-          quality={100}
-          unoptimized
-        />
+        <div className="acme-finals">
+          <div className="acme-final oracle-final">
+            <ExpandableImage
+              src="/images/oracle-identify-shifts.png"
+              alt="Two phone screens showing a month calendar of selected shifts and a day view with recommended shifts and staffing insights"
+              width={1465}
+              height={897}
+              quality={100}
+              unoptimized
+              fillTrigger
+              style={{ width: "100%", height: "auto" }}
+            />
+            <div className="acme-final-copy">
+              <p className="acme-final-title">
+                Easily identify suitable shifts and visualize schedule
+              </p>
+              <p className="acme-final-desc">
+                Nurses can pick shifts based on recommendations and understand
+                where they are committing to work
+              </p>
+            </div>
+          </div>
+          <div className="acme-final oracle-final">
+            <ExpandableImage
+              src="/images/oracle-stay-in-control.png"
+              alt="Scheduling interface showing nurses can edit and generate alternative schedules with AI"
+              width={1291}
+              height={899}
+              quality={100}
+              unoptimized
+              fillTrigger
+              style={{ width: "100%", height: "auto" }}
+            />
+            <div className="acme-final-copy">
+              <p className="acme-final-title">
+                Stay in control without doing the heavy lifting
+              </p>
+              <p className="acme-final-desc">
+                Nurses can leverage AI to make edits and generate different
+                scheduling options
+              </p>
+            </div>
+          </div>
+          <div className="acme-final oracle-final">
+            <ExpandableImage
+              src="/images/oracle-meet-requirements.png"
+              alt="Scheduling interface showing compliance with hospital, department, and state requirements"
+              width={807}
+              height={897}
+              quality={100}
+              unoptimized
+              fillTrigger
+              className="oracle-meet-requirements-image"
+              style={{ width: "100%", height: "auto" }}
+            />
+            <div className="acme-final-copy">
+              <p className="acme-final-title">
+                Meet scheduling requirements
+              </p>
+              <p className="acme-final-desc">
+                Nurses can ensure their schedules follow hospital and department
+                rules, and state laws
+              </p>
+            </div>
+          </div>
+        </div>
 
         <hr className="case-divider" />
 
         <CaseTextBlock>
           <h2>Impact</h2>
-          <p>
-            The final prototype consisted of viewing the recommended schedule,
-            editing the schedule manually or with AI, and reviewing and submitting
-            a schedule.
-          </p>
           <p>
             My approach was adopted into the Human Capital Management (HCM)
             team&apos;s aspirational designs, influencing the
@@ -331,21 +383,6 @@ export default function OraclePage() {
           <p>
             Thank you to my mentors and support team for the encouragement and
             making this project possible!
-          </p>
-        </CaseTextBlock>
-
-        <hr className="case-divider" />
-
-        <CaseTextBlock>
-          <p>
-            For more information about this project, please{" "}
-            <a
-              className="link-blue"
-              href="mailto:sjwtang@gmail.com?subject=Shirley%20Tang%20portfolio%20inquiry"
-            >
-              send me an email
-            </a>
-            !
           </p>
         </CaseTextBlock>
 

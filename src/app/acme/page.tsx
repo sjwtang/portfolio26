@@ -63,15 +63,14 @@ export default function AcmePage() {
       <CaseHero
         title="ACME: Credit Card Fraud Dashboard"
         subtitle="Supporting call center investigators to stop fraudulent credit card transactions"
-        image="/images/acme-hero.png"
+        image="/images/acme-hero-new.png"
         imageAlt="ACME credit card fraud dashboard screens"
-        imageWidth={2040}
-        imageHeight={1407}
-        framed
+        imageWidth={2303}
+        imageHeight={791}
+        imageQuality={100}
+        imageUnoptimized
+        fullBleed
         divider={false}
-        titleGap={28}
-        framePadding="0"
-        frameClassName="case-hero-frame acme-hero-frame case-hero-media--plain"
         tldr={
           <div className="case-tldr">
             <h2 className="case-tldr-heading">TL;DR</h2>

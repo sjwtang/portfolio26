@@ -28,6 +28,7 @@ export function CaseHero({
   beforeImage,
   tldr,
   layout = "default",
+  fullBleed = false,
   heroFooter,
   metaLeft,
   metaRight,
@@ -51,17 +52,19 @@ export function CaseHero({
   beforeImage?: ReactNode;
   tldr?: ReactNode;
   layout?: "default" | "split";
+  fullBleed?: boolean;
   heroFooter?: ReactNode;
   metaLeft: MetaPair[];
   metaRight: MetaPair[];
   skills?: string[];
 }) {
   const isSplit = layout === "split";
+  const isFullBleed = fullBleed && !isSplit;
   const imageFrame = (
     <div
-      className={`case-hero-media${frameClassName ? ` ${frameClassName}` : ""}${framed ? " case-hero-media--framed" : ""}${isSplit ? " case-hero-media--split" : ""}`}
+      className={`case-hero-media${frameClassName ? ` ${frameClassName}` : ""}${framed && !isFullBleed ? " case-hero-media--framed" : ""}${isSplit ? " case-hero-media--split" : ""}${isFullBleed ? " case-hero-media--bleed" : ""}`}
       style={
-        framed
+        framed && !isFullBleed
           ? {
               padding: framePadding,
               gap: frameGap,
@@ -77,10 +80,17 @@ export function CaseHero({
         priority
         quality={imageQuality}
         unoptimized={imageUnoptimized}
-        fillTrigger={!framed || Boolean(heroFooter) || isSplit}
+        fillTrigger={!framed || Boolean(heroFooter) || isSplit || isFullBleed}
         style={{
-          width: framed && !heroFooter && !isSplit ? "auto" : isSplit ? "auto" : "100%",
-          maxWidth: "100%",
+          width:
+            isFullBleed
+              ? "100%"
+              : framed && !heroFooter && !isSplit
+                ? "auto"
+                : isSplit
+                  ? "auto"
+                  : "100%",
+          maxWidth: isFullBleed ? "none" : "100%",
           height: "auto",
           ...imageStyle,
         }}
@@ -96,9 +106,9 @@ export function CaseHero({
     >
       <h1
         style={{
-          fontSize: 40,
+          fontSize: 32,
           fontWeight: 700,
-          lineHeight: "48px",
+          lineHeight: "32px",
           margin: 0,
           color: "#302A27",
         }}
@@ -107,9 +117,9 @@ export function CaseHero({
       </h1>
       <p
         style={{
-          fontSize: 24,
+          fontSize: 18,
           fontWeight: 400,
-          lineHeight: "28.8px",
+          lineHeight: "27px",
           margin: 0,
           color: "#302A27",
         }}
@@ -119,28 +129,8 @@ export function CaseHero({
     </div>
   );
 
-  return (
-    <div
-      className={`case-shell${isSplit ? " case-hero--split" : ""}`}
-      style={{ paddingTop: isSplit ? 40 : 80 }}
-    >
-      {isSplit ? (
-        <>
-          {titleBlock}
-          <div className="case-hero-stage">
-            <div className="case-hero-stage-image">{imageFrame}</div>
-          </div>
-        </>
-      ) : (
-        <>
-          {titleBlock}
-          {beforeImage ? (
-            <div style={{ marginTop: 50 }}>{beforeImage}</div>
-          ) : null}
-          {imageFrame}
-        </>
-      )}
-
+  const metaAndRest = (
+    <>
       <div
         style={{
           display: "grid",
@@ -202,6 +192,48 @@ export function CaseHero({
           }
         }
       `}</style>
+    </>
+  );
+
+  const heroCopy = isSplit ? (
+    <>
+      {titleBlock}
+      <div className="case-hero-stage">
+        <div className="case-hero-stage-image">{imageFrame}</div>
+      </div>
+    </>
+  ) : (
+    <>
+      {titleBlock}
+      {beforeImage ? (
+        <div style={{ marginTop: 50 }}>{beforeImage}</div>
+      ) : null}
+      {isFullBleed ? null : imageFrame}
+    </>
+  );
+
+  if (isFullBleed) {
+    return (
+      <>
+        {imageFrame}
+        <div className="case-shell" style={{ paddingTop: 50 }}>
+          {titleBlock}
+          {beforeImage ? (
+            <div style={{ marginTop: 50 }}>{beforeImage}</div>
+          ) : null}
+          {metaAndRest}
+        </div>
+      </>
+    );
+  }
+
+  return (
+    <div
+      className={`case-shell${isSplit ? " case-hero--split" : ""}`}
+      style={{ paddingTop: isSplit ? 40 : 80 }}
+    >
+      {heroCopy}
+      {metaAndRest}
     </div>
   );
 }
