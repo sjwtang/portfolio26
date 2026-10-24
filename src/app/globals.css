@@ -844,18 +844,23 @@ img {
   0% {
     transform: scale(1);
   }
+
   22% {
     transform: scale(1.04);
   }
+
   42% {
     transform: scale(0.992);
   }
+
   62% {
     transform: scale(1.012);
   }
+
   82% {
     transform: scale(1.002);
   }
+
   100% {
     transform: scale(1);
   }
@@ -866,10 +871,12 @@ img {
     opacity: 0;
     transform: scale(0.2) rotate(0deg);
   }
+
   35% {
     opacity: 1;
     transform: scale(1.15) rotate(20deg);
   }
+
   100% {
     opacity: 0;
     transform: scale(0.6) rotate(40deg) translateY(-10px);
@@ -877,6 +884,7 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .avatar-highfive-image,
   .avatar-highfive-sparkle {
     transition: none;
@@ -1279,8 +1287,7 @@ img {
   width: 22px;
   height: 22px;
   flex-shrink: 0;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B85C42'%3E%3Cpath d='M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4L12 0z'/%3E%3C/svg%3E")
-    center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B85C42'%3E%3Cpath d='M12 0l2.4 9.6L24 12l-9.6 2.4L12 24l-2.4-9.6L0 12l9.6-2.4L12 0z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .case-tldr-list {
@@ -1582,7 +1589,7 @@ img {
   display: block;
 }
 
-.case-figure > .case-quote--center,
+.case-figure>.case-quote--center,
 .case-quote--center {
   align-self: center;
 }
@@ -1723,7 +1730,7 @@ img {
   display: contents;
 }
 
-.acme-persona-lists > div {
+.acme-persona-lists>div {
   min-width: 0;
 }
 
@@ -1831,12 +1838,12 @@ img {
   align-self: center;
 }
 
-.oracle-final:first-child > .expandable-image-trigger,
-.oracle-final:first-child > .acme-final-copy {
+.oracle-final:first-child>.expandable-image-trigger,
+.oracle-final:first-child>.acme-final-copy {
   align-self: center;
 }
 
-.oracle-final:first-child > .acme-final-copy {
+.oracle-final:first-child>.acme-final-copy {
   width: 100%;
   text-align: left;
 }
@@ -1951,7 +1958,7 @@ img {
   width: 100%;
 }
 
-.gm-testimonial > * {
+.gm-testimonial>* {
   flex: 1 1 280px;
   max-width: 628px;
 }
