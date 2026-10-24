@@ -159,7 +159,7 @@ export default function HomePage() {
                 height={1329}
                 className={
                   project.background
-                    ? "project-item-image project-item-device"
+                    ? `project-item-image project-item-device${project.href === "/acme" ? " acme-card-device" : project.href === "/goodmaps" ? " gm-card-device" : ""}`
                     : "project-item-image"
                 }
               />

@@ -1038,6 +1038,13 @@ img {
   object-fit: contain;
 }
 
+.acme-card-device,
+.gm-card-device {
+  width: 92% !important;
+  height: 92% !important;
+  margin: 4%;
+}
+
 .project-item:hover:not(:has(.home-dog-hotspot:hover, .home-dog-hit-path:hover)) .project-item-image,
 .project-item:has(.project-item-link:focus-visible) .project-item-image {
   transform: scale(1.04);
